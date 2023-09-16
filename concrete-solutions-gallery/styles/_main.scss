@@ -1,0 +1,26 @@
+@use "../../styles/variables" as *;
+
+main {
+    .wrapper {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .hero-text {
+            margin-block:6rem 3rem;
+
+            h1 {
+                max-width:14ch;
+                text-align:center;
+            }
+        }
+
+        .hero-image-grid {
+            display:grid;
+            grid-template-columns: 1fr 1fr;
+            gap:1rem;
+            row-gap:2rem;
+        }
+    }
+}

@@ -1,0 +1,29 @@
+@use "../../styles/variables" as *;
+
+header {
+    position:absolute;
+    .header-wrapper {
+        width:100%;
+        max-width:1440px;
+        padding:1rem 4em;
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+
+        nav {
+            ul {
+                display:flex;
+                align-items: center;
+                gap:2rem;
+            }
+        }
+
+        .logo-container {
+            background-color:$white;
+            img {
+                mix-blend-mode: difference !important;
+                width:100px;
+            }
+        }
+    }
+}

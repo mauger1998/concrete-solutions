@@ -1,0 +1,143 @@
+@use "./variables" as *;
+
+main {
+    .wrapper {
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        gap:2rem;
+        padding-block-start:9rem;
+
+        .left-column {
+            display:grid;
+            gap:2rem;
+            grid-template-rows: 1fr 0.5fr;
+
+            .left-column-item:not(:nth-child(2)) {
+                display:flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+                transition: clip-path 600ms ease-in-out;
+
+
+                p {
+                    margin-block:1rem 2rem;
+                    max-width:50ch;
+                }
+            }
+
+            .left-column-item:nth-child(2) {
+                height:100%;
+                img {
+                    height:100%;
+                    object-fit:cover;
+                    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+                    transition: clip-path 500ms ease-in-out;
+                }
+            }
+        }
+        .right-column {
+            display:grid;
+            gap:2rem;
+
+            .right-column-top {
+                display:grid;
+                grid-template-columns: 1fr 1fr;
+                gap:1rem;
+
+                .right-column-top-left {
+                    img {
+                        height:100%;
+                        object-fit:cover;
+                        clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+                        transition: clip-path 500ms ease-in-out;
+                    }
+                }
+
+                .right-column-top-right {
+                    display:grid;
+                    gap:1rem;
+                    grid-template-rows: 1fr 1fr 1fr 2fr ;
+
+                    .hero-card {
+                        display:flex;
+                        align-items: center;
+                        box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 24px;
+                        padding:1rem;
+                        gap:1rem;
+                        transform:translateY(4rem);
+                        opacity:0;
+                        img {
+                            width:30px;
+                        }
+                    }
+                    .hero-card-alternate {
+                        display:flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        justify-content: space-between;
+                        padding:1rem;
+                        border:1px solid $black;
+                        transform:translateY(4rem);
+                        opacity:0;
+
+                    }
+                }
+
+                
+            }
+            .right-column-bottom {
+                    img {
+                        height:100%;
+                        object-fit:cover;
+                        clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+                        transition: clip-path 500ms ease-in-out;
+
+
+
+                    }
+            }
+        }
+    }
+
+    @media(max-width:1024px) {
+        .wrapper {
+            grid-template-columns: 1fr;
+
+            .left-column {
+                grid-template-rows: 0.5fr 0.5fr;
+
+                .left-column-item:not(:nth-child(2)) {
+                    padding-block:4rem;
+                    align-items: center;
+
+                    h1 {
+                        max-width:18ch;
+                        line-height:1.3;
+                        text-align:center;
+                    }
+
+                    p {
+                        text-align:center;
+                    }
+                }
+            }
+        }
+    }
+    @media(max-width:820px) {
+
+        .wrapper{
+            .right-column {
+                .right-column-top {
+                    grid-template-columns: 1fr;
+
+                    .right-column-top-right {
+                        grid-row:1;
+                    }
+                }
+            }
+        }
+       
+    }
+}
