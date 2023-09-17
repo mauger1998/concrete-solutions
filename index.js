@@ -22,105 +22,127 @@ contactButton.forEach((button) => {
 
 const selectorImages = document.querySelectorAll(".selector-images img")
 const selectorButtons = document.querySelectorAll(".selector-button")
+const answers = document.querySelectorAll(".answer")
 
 selectorButtons.forEach((button, index) => {
   button.addEventListener("mouseenter", (e) => {
     selectorImages[index].classList.add("active")
+    answers[index].classList.add("active")
+
   })
   button.addEventListener("mouseleave", (e) => {
     selectorImages[index].classList.remove("active")
+    answers[index].classList.remove("active")
   })
 })
 
 
 
 
+// Hero Text
+
+const heroText = gsap.utils.toArray(".cls-2")
+
+let heroTimeline = gsap.timeline({
+  scrollTrigger: {
+    trigger: heroText,
+    start: "top bottom", // when the top of the trigger hits the top of the viewport
+    scrub:true,
+    end: "clamp(top center)",
+  },
+})
+let firstTimeline = gsap.timeline({
+
+})
+
+firstTimeline.to(heroText, {
+  // strokeDasharray:1100,
+  strokeDashoffset:0,
+})
+
+heroTimeline.to(heroText, {
+  // strokeDasharray:1100,
+  strokeDashoffset:0,
+})
+.to(heroText, {
+  // strokeDasharray:1100,
+  strokeDashoffset:1100,
+
+})
 
 
-
-  const text = gsap.utils.toArray(".cls-1")
-
-  let tl = gsap.timeline({
-    scrollTrigger: {
-        trigger: ".animations-section svg",
-        start:"center center",
-        scrub:2,
-        end:"+=1000px",
-    }
-  })
-
-  let heroTimeline = gsap.timeline({
-
-  })
-
-  heroTimeline.to(".right-column-top-left img", {
-    clipPath:"polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
-    ease: 
-    Power4.
-    easeInOut,
-  })
-  .to(".left-column-item:nth-child(2) img", {
-    clipPath:"polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
-    ease: 
-    Power4.
-    easeInOut,
-  }, 0.15 )
-  .to(".right-column-bottom img", {
-    clipPath:"polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
-    ease: 
-    Power4.
-    easeInOut,
-  }, 0.3)
+// gsap.to(heroText, {
   
-  .to(".left-column-item:not(:nth-child(2))", {
-    clipPath:"polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
-    ease: 
-    Power4.
-    easeInOut,
-  },0.5 )
-  .to(".hero-card", {
-    opacity:1,
-    y:0,
-    stagger:0.2,
-    ease: 
-    Power1.
-    easeInOut,
-  }, 1.2)
-  .to(".hero-card-alternate", {
-    opacity:1,
-    y:0,
-    stagger:0.2,
-    ease: 
-    Power1.
-    easeInOut,
-  }, 1.4)
+//   strokeDashoffset:1100,
 
-  gsap.to(".animations-section svg", {
-    scrollTrigger: {
-      trigger: ".animations-section svg",
-      start: "center center", // when the top of the trigger hits the top of the viewport
-      pin:true,
-      scrub:true,
-      end:"+=1200",
-      
-  
-    },
-    ease: 
-    Power1.
-    easeInOut,
-    // stagger:0.1,
-  
-  });
+// });
+
+gsap.to(".icon-card", {
+  scrollTrigger: {
+    trigger:".icon-card",
+    start:"top 90%",
+    toggleActions: "play none none reset",
 
 
-  tl.to(text, {
-    // strokeDasharray:1100,
-    strokeDashoffset:0,
-    // duration:1.5,
-  })
-  .to(text, {
-    // strokeDasharray:1100,
-    strokeDashoffset:1100,
-    delay:2,
-    // duration:1.5,
-  })
+  }, 
+  clipPath:"polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+  stagger:0.2,
+  ease: 
+Power1.
+easeOut,
+})
+
+
+gsap.to(".selector-button", {
+  scrollTrigger: {
+    trigger:".selector-button",
+    start:"top 90%",
+    toggleActions: "play none none reset",
+
+
+  }, 
+  y:0,
+  opacity:1,
+  stagger:0.2,
+  ease: 
+Power1.
+easeOut,
+})
+
+
+// Contact Form
+
+let contactTimeline = gsap.timeline({ scrollTrigger: {
+  trigger:".contact-form",
+  start:"top center",
+  toggleActions: "play none none reset",
+
+},})
+
+contactTimeline.to(".contact-form", {
+  opacity:1,
+  ease: 
+  Power1.
+  easeOut,
+  duration:0.5,
+})
+
+
+.to(" .contact-form form, .contact-form h3", {
+  clipPath:"polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+  stagger:0.3,
+  ease: 
+  Power1.
+  easeOut,
+  duration:0.5,
+}, 0.5)
+
+
+
+
+
+
+
+
+
+

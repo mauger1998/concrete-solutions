@@ -45,6 +45,7 @@
                     height:100%;
                     object-fit:cover;
                     transition: opacity 500ms ease;
+                    
 
 
                     &:not(:first-child) {
@@ -64,43 +65,71 @@
             }
 
             .selector-buttons {
-                display:grid;
-                grid-template-rows: 1fr 1fr 1fr 1fr;
+                display:flex;
+                flex-direction: column;
                 background-color:$black;
                 gap:0.1rem;
                 
 
                 .selector-button {
-                    padding-inline:2rem;
-                    display:flex;
-                    align-items: center;
-                    justify-content: space-between;
                     background-color:#1A1A1A;
+                    height:100%;
                     cursor:pointer;
                     transition:background-color 300ms ease;
+                    transform:translateY(4rem);
+                    opacity:0;
+                    padding:2rem;
+                    display:flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: space-between;
+                    width:100%;
+                    .question {
+                        display:flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        width:100%;
 
-                    h3 {
-                        color:white;
-                        transition:color 300ms ease;
-
-                    }
+                        h3 {
+                            color:white;
+                            transition:color 300ms ease;
     
-                    img {
-                        width:2rem;
-                        transform:rotateZ(90deg);
-                        transition: transform 300ms ease;
-
+                        }
+        
+                        img {
+                            width:2rem;
+                            transform:rotateZ(90deg);
+                            transition: transform 300ms ease;
+    
+                        }
                     }
 
+                    .answer {
+                        max-height:0;
+                        overflow:hidden;
+                        transition:max-height 500ms ease;
 
+                       
+                        p {
+                            color:white;
+                            margin-block-start:1rem;
+                            transition: color 300ms ease;
+                            
+                        }
+                        &.active {
+                            max-height:12rem;
+                            p {
+                                color:black;
+                                transition: color 300ms ease;
+                            }
+                        }
+                    }
                     &:hover {
                         background-color:$white;
                         transition:background-color 300ms ease;
-
                         h3 {
                             color:$black;
                             transition:color 300ms ease;
-
                         }
 
                         img {

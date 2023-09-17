@@ -1,6 +1,9 @@
 @use "./variables" as *;
 
-
+@font-face {
+    src:url("../Candide Bold.ttf");
+    font-family:concrete;
+}
 
 *,
 *::before,

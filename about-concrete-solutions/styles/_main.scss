@@ -8,7 +8,20 @@ main {
         justify-content: space-between;
         height:98vh;
         max-height:1000px;
-        padding-block-start:8rem;
+        padding-block:0rem;
+        padding-inline:0;
+
+
+        .hero-image-grid {
+            width:clamp(450px, 45%, 700px);
+            margin:0;
+            &:nth-child(1) {
+                align-self:flex-end;
+            }
+            &:nth-child(3) {
+                align-self:flex-start;
+            }
+        }
 
         .hero-text {
             display:flex;
@@ -16,8 +29,18 @@ main {
             justify-content: center;
             flex-direction: column;
             h1 {
-                max-width:14ch;
+                max-width:18ch;
                 text-align:center;
+                color:black;
+                font-family:concrete !important;
+                margin-block:-2.5rem;
+                z-index:10;
+                font-size:clamp($mobile-h1, 8vw, $h1);
+
+                .animated {
+                    width:725px;
+                    width:clamp(360px, 50vw, 725px);
+                }
             }
             p {
                max-width:50ch;
@@ -25,15 +48,43 @@ main {
                margin-block-start:2rem;
             }
         }
-
       
-
-        .hero-image-grid {
-            display:grid;
-            grid-template-columns: 1fr 1fr;
-            gap:2rem;
-            // margin-top:auto;
-        }
-    
     }
+
+    @media(max-width:630px) {
+        .wrapper {
+            .hero-image-grid {
+                width:clamp(300px, 70%, 450px);
+            }
+        }
+    }
+    @media(max-width:426px) {
+        .wrapper {
+            .hero-text {
+                padding-inline:1rem;
+                h1 {
+                    font-size:clamp(32px, 10vw, $mobile-h1);
+
+                    .animated {
+                        width:725px;
+                        width:clamp(220px, 65vw, 300px);
+                    }
+                }
+            }
+        }
+    }
+    @media(max-width:387px) {
+        .wrapper {
+            .hero-image-grid {
+                width:clamp(250px, 70%, 300px);
+            }
+        }
+    }
+}
+
+
+.cls-2 {
+    stroke-dashoffset: 1100;
+    stroke-dasharray: 1100;
+    transition:500ms;
 }
