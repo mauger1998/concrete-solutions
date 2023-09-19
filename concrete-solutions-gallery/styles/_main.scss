@@ -10,9 +10,8 @@ main {
         align-items: center;
         justify-content: space-between;
        .swiper {
-        width:clamp(400px, 50%, 700px);
+        width:clamp(401px, 50%, 700px);
 
-       
         overflow:visible;
         .swiper-wrapper {
             width:100%;

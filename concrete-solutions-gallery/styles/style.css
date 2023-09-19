@@ -272,7 +272,7 @@ main .wrapper {
   justify-content: space-between;
 }
 main .wrapper .swiper {
-  width: clamp(400px, 50%, 700px);
+  width: clamp(401px, 50%, 700px);
   overflow: visible;
 }
 main .wrapper .swiper .swiper-wrapper {
