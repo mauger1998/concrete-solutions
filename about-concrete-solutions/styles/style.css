@@ -167,11 +167,7 @@ header .header-wrapper nav ul a:nth-child(2) {
 header .header-wrapper nav ul a li {
   color: white;
 }
-header .header-wrapper .logo-container {
-  background-color: #ffffff;
-}
 header .header-wrapper .logo-container img {
-  mix-blend-mode: difference !important;
   width: 100px;
 }
 @media (max-width: 1024px) {
@@ -192,9 +188,6 @@ header .header-wrapper .logo-container img {
 @media (max-width: 382px) {
   header .header-wrapper .logo-container {
     background-color: transparent;
-  }
-  header .header-wrapper .logo-container img {
-    mix-blend-mode: color-dodge !important;
   }
 }
 
@@ -275,7 +268,7 @@ main .wrapper {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  height: 98vh;
+  height: 98lvh;
   max-height: 1000px;
   padding-block: 0rem;
   padding-inline: 0;

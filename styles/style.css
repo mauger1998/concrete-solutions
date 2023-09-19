@@ -171,7 +171,6 @@ header .header-wrapper nav ul a li {
   color: white;
 }
 header .header-wrapper .logo-container img {
-  mix-blend-mode: color-dodge !important;
   width: 100px;
 }
 @media (max-width: 1024px) {
@@ -273,7 +272,7 @@ main {
   }
 }
 main .wrapper {
-  height: 98vh;
+  height: 98lvh;
   max-height: 1000px;
   display: flex;
   flex-direction: column;

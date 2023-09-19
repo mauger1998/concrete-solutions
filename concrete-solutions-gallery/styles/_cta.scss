@@ -26,6 +26,13 @@
             align-items: flex-start;
             justify-content: center;
 
+            @media(max-width:700px) {
+                padding-inline:2rem;
+            }
+            @media(max-width:500px) {
+                padding-inline:1rem;
+            }
+
         }
         
 
@@ -44,6 +51,14 @@
             clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
             transition:clip-path 700ms ease;
         }
+    }
+    @media(max-width:490px) {
+        .wrapper {
+            .blur {
+                width:90%;
+            }
+        }
+        
     }
    
 }

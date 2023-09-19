@@ -34,12 +34,10 @@ header {
         }
 
         .logo-container {
-            background-color:$white;
             @media(max-width:993px) {
                 // background-color:transparent;
             }
             img {
-                mix-blend-mode: difference !important;
                 @media(max-width:993px) {
                     // mix-blend-mode: color-dodge !important;
                 }
@@ -62,7 +60,6 @@ header {
                 background-color:transparent;
 
                 img {
-                    mix-blend-mode: color-dodge !important;
                 }
             }
         }

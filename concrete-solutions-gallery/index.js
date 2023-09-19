@@ -176,9 +176,9 @@ fetch(URLTWO)
 const swiper = new Swiper('.swiper', {
   // Optional parameters
   direction: 'horizontal',
-  spaceBetween:50,
+  spaceBetween:10,
   loop:true,
-  slidesPerView:1.01,
+  slidesPerView:1.2,
   centeredSlides:true,
 
   // // If we need pagination
