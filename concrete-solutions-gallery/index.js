@@ -178,6 +178,7 @@ const swiper = new Swiper('.swiper', {
   direction: 'horizontal',
   spaceBetween:50,
   loop:true,
+  slidesPerView:1.01,
   centeredSlides:true,
 
   // // If we need pagination
