@@ -16,10 +16,9 @@ const heroText = gsap.utils.toArray(".cls-2")
 let heroTimeline = gsap.timeline({
   scrollTrigger: {
     trigger: heroText,
-    start: "clamp(top center)", // when the top of the trigger hits the top of the viewport
+    start: "top 60%", // when the top of the trigger hits the top of the viewport
     scrub:true,
-    end: "clamp(top 40%)",
-
+    end: "clamp(top 35%)",
   },
 })
 let firstTimeline = gsap.timeline({
@@ -81,9 +80,9 @@ gsap.to(".split > div > div",{
     y:0,
     stagger:0.02,
 })
-gsap.to(".content h3", {
+gsap.to(".content p", {
     scrollTrigger: {
-      trigger:".content h3",
+      trigger:".content p",
       start:"top 90%",
       toggleActions: "play none none reset",
   
@@ -95,4 +94,126 @@ gsap.to(".content h3", {
     ease: 
   Power1.
   easeOut,
+})
+
+let URL = "https://h1h8xymr.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type+%3D%3D+%22teamMember%22%5D+%7C+order%28order%29+%7B+%0A++name%2C%0A++%22imgUrl%22%3A+image.asset-%3Eurl%2C%0A%7D"
+
+// fetch the content
+fetch(URL)
+.then((res) => res.json())
+.then(({ result }) => {
+  const teamGrid = document.querySelector(".team-grid")
+  if (result.length > 0) {
+    teamGrid.innerHTML = ""
+    result.forEach((result) => {
+      const teamGridItem = document.createElement("div")
+      teamGridItem.classList.add("team-grid-item")
+      teamGrid.appendChild(teamGridItem)
+
+      const absolute = document.createElement("p")
+      absolute.classList.add("absolute")
+      absolute.textContent = "Team"
+      teamGridItem.appendChild(absolute)
+
+      const teamImage = document.createElement("img")
+      teamImage.src = result.imgUrl
+      teamGridItem.appendChild(teamImage) 
+
+      const teamName = document.createElement("h3")
+      teamName.textContent = result.name
+      teamGridItem.appendChild(teamName)
+      
+    });
+    //Team grid items
+gsap.to(".team-grid-item", {
+  scrollTrigger: {
+    trigger:".team-grid-item",
+    start:"top 90%",
+    toggleActions: "play none none reset",
+
+
+  }, 
+  y:"auto",
+  opacity:1,
+  delay:0.25,
+  stagger:0.2,
+  ease: 
+Power1.
+easeOut,
+})
+   
+  }
+})
+.catch((err) => console.error(err));
+
+
+
+
+
+// Contact Form
+
+let contactTimeline = gsap.timeline({ scrollTrigger: {
+  trigger:".blur",
+  start:"top center",
+  toggleActions: "play none none reset",
+
+},})
+
+contactTimeline.to(".blur", {
+  opacity:1,
+  ease: 
+  Power1.
+  easeOut,
+  duration:0.5,
+})
+
+
+.to(" .blur p, .blur h2, .blur button", {
+  clipPath:"polygon(0 0, 120% 0, 100% 100%, 0% 100%)",
+  stagger:0.3,
+  ease: 
+  Power1.
+  easeOut,
+  duration:0.5,
+}, 0.5)
+
+
+
+// Dropdown
+
+const menuOpen = document.querySelector(".open")
+const menuClose = document.querySelector(".close")
+const overlay = document.querySelector(".overlay")
+const contactPress = document.querySelector("header .contact-button")
+const menuLinks = document.querySelectorAll(".overlay ul a")
+const allContent = document.querySelector("html")
+
+
+var timeline = gsap.timeline({defaults:{duration: 1, ease: Back.easeOut.config(2)}})
+
+timeline.paused(true)
+
+timeline.to(".overlay", {clipPath: "circle(100%)", "opacity":1,})
+
+menuOpen.addEventListener("click", () => {
+  timeline.play()
+  contactPress.style.pointerEvents = "none"
+  contactPress.style.display = "none"
+  allContent.style.overflow = "hidden"
+
+  
+  })
+
+  
+
+  
+
+
+menuClose.addEventListener("click", () => {
+  timeline.reverse(.5)
+  contactPress.style.pointerEvents = "all"
+  contactPress.style.display = "flex"
+  allContent.style.overflow = "visible"
+
+
 })

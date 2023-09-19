@@ -28,6 +28,18 @@ main {
             align-items: center;
             justify-content: center;
             flex-direction: column;
+            position:relative;
+
+            & > img {
+                width:2rem;
+                position:absolute;
+                bottom:-12rem;
+
+                @media(max-width:943px) {
+                    bottom:-7rem;
+                    width:1.5rem;
+                }
+            }
             h1 {
                 max-width:18ch;
                 text-align:center;

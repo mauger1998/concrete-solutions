@@ -83,6 +83,7 @@ h2 {
   line-height: 1.2;
   font-weight: 400;
   font-family: "Libre Baskerville", serif;
+  font-family: concrete;
 }
 @media (max-width: 500px) {
   h2 {
@@ -174,9 +175,6 @@ header .header-wrapper .logo-container img {
   width: 100px;
 }
 @media (max-width: 1024px) {
-  header .header-wrapper {
-    justify-content: center;
-  }
   header .header-wrapper nav {
     display: none;
   }
@@ -189,6 +187,78 @@ header .header-wrapper .logo-container img {
 @media (max-width: 500px) {
   header .header-wrapper {
     padding-inline: 1rem;
+  }
+}
+
+.menu {
+  position: relative;
+  z-index: 10000 !important;
+  display: none;
+}
+@media (max-width: 1024px) {
+  .menu {
+    display: block;
+  }
+}
+.menu .open {
+  cursor: pointer !important;
+}
+.menu .overlay {
+  position: fixed;
+  z-index: 10000 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6rem;
+  background-color: #000001;
+  width: 100%;
+  height: 100vh;
+  inset: 0;
+  padding: 4rem;
+  -webkit-clip-path: circle(0%);
+          clip-path: circle(0%);
+  opacity: 0;
+}
+.menu .overlay ul {
+  display: block;
+}
+.menu .overlay button {
+  color: white;
+}
+.menu .overlay .close {
+  cursor: pointer !important;
+  z-index: 10000 !important;
+  display: block !important;
+}
+.menu .overlay button {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 4rem;
+  right: 4rem;
+  font-size: 2rem;
+  color: white;
+  z-index: 1000000 !important;
+}
+.menu .overlay ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+}
+.menu .overlay ul li {
+  color: white !important;
+  font-weight: 700;
+}
+@media (max-width: 500px) {
+  .menu .overlay {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+@media (max-width: 1024px) {
+  .menu .overlay ul:last-child {
+    display: flex;
   }
 }
 
@@ -234,6 +304,7 @@ main .wrapper h1 .animated {
   grid-template-columns: 1fr 1fr 1fr;
   padding-inline: 0;
   padding-block: 0;
+  max-width: 1920px;
 }
 .icon-cards-section .wrapper .icon-card {
   background-color: #ffffff;
@@ -245,9 +316,9 @@ main .wrapper h1 .animated {
   padding-block: 6rem;
   -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
           clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
-  transition: -webkit-clip-path 1000ms ease;
-  transition: clip-path 1000ms ease;
-  transition: clip-path 1000ms ease, -webkit-clip-path 1000ms ease;
+  transition: -webkit-clip-path 500ms ease;
+  transition: clip-path 500ms ease;
+  transition: clip-path 500ms ease, -webkit-clip-path 500ms ease;
 }
 .icon-cards-section .wrapper .icon-card:nth-child(1) {
   border: 1px solid #000001;

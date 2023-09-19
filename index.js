@@ -146,3 +146,41 @@ contactTimeline.to(".contact-form", {
 
 
 
+// Dropdown
+
+const menuOpen = document.querySelector(".open")
+const menuClose = document.querySelector(".close")
+const overlay = document.querySelector(".overlay")
+const contactPress = document.querySelector("header .contact-button")
+const menuLinks = document.querySelectorAll(".overlay ul a")
+const allContent = document.querySelector("html")
+
+
+var timeline = gsap.timeline({defaults:{duration: 1, ease: Back.easeOut.config(2)}})
+
+timeline.paused(true)
+
+timeline.to(".overlay", {clipPath: "circle(100%)", "opacity":1,})
+
+menuOpen.addEventListener("click", () => {
+  timeline.play()
+  contactPress.style.pointerEvents = "none"
+  contactPress.style.display = "none"
+  allContent.style.overflow = "hidden"
+
+  
+  })
+
+  
+
+  
+
+
+menuClose.addEventListener("click", () => {
+  timeline.reverse(.5)
+  contactPress.style.pointerEvents = "all"
+  contactPress.style.display = "flex"
+  allContent.style.overflow = "visible"
+
+
+})

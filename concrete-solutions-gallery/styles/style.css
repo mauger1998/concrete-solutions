@@ -83,6 +83,7 @@ h2 {
   line-height: 1.2;
   font-weight: 400;
   font-family: "Libre Baskerville", serif;
+  font-family: concrete;
 }
 @media (max-width: 500px) {
   h2 {
@@ -174,9 +175,6 @@ header .header-wrapper .logo-container img {
   width: 100px;
 }
 @media (max-width: 1024px) {
-  header .header-wrapper {
-    justify-content: center;
-  }
   header .header-wrapper nav {
     display: none;
   }
@@ -192,8 +190,86 @@ header .header-wrapper .logo-container img {
   }
 }
 
+.menu {
+  position: relative;
+  z-index: 10000 !important;
+  display: none;
+}
+@media (max-width: 1024px) {
+  .menu {
+    display: block;
+  }
+}
+.menu .open {
+  cursor: pointer !important;
+}
+.menu .overlay {
+  position: fixed;
+  z-index: 10000 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6rem;
+  background-color: #000001;
+  width: 100%;
+  height: 100vh;
+  inset: 0;
+  padding: 4rem;
+  -webkit-clip-path: circle(0%);
+          clip-path: circle(0%);
+  opacity: 0;
+}
+.menu .overlay ul {
+  display: block;
+}
+.menu .overlay button {
+  color: white;
+}
+.menu .overlay .close {
+  cursor: pointer !important;
+  z-index: 10000 !important;
+  display: block !important;
+}
+.menu .overlay button {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 4rem;
+  right: 4rem;
+  font-size: 2rem;
+  color: white;
+  z-index: 1000000 !important;
+}
+.menu .overlay ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+}
+.menu .overlay ul li {
+  color: white !important;
+  font-weight: 700;
+}
+@media (max-width: 500px) {
+  .menu .overlay {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+@media (max-width: 1024px) {
+  .menu .overlay ul:last-child {
+    display: flex;
+  }
+}
+
 main .wrapper {
   padding-block-start: 6rem;
+  height: 98vh;
+  max-height: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 main .wrapper .swiper {
   width: clamp(400px, 50%, 700px);
@@ -214,6 +290,9 @@ main .wrapper .swiper .swiper-wrapper .swiper-slide.swiper-slide-active {
 }
 main .wrapper .swiper .swiper-wrapper .swiper-slide img {
   width: 100%;
+  max-height: 420px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 main .wrapper h1 {
   max-width: 24ch;
@@ -223,6 +302,11 @@ main .wrapper h1 {
   z-index: 10;
   font-size: clamp(64px, 8vw, 112px);
   margin-block-start: 1rem;
+}
+@media (max-width: 900px) {
+  main .wrapper h1 {
+    margin-block-start: 8rem;
+  }
 }
 main .wrapper h1 .animated {
   width: 725px;
@@ -287,11 +371,102 @@ main .wrapper h1 .animated {
   width: 450px;
   padding: 8rem 4rem;
   height: 100%;
+  min-height: 650px;
+  opacity: 0;
+  transition: opacity 500ms ease;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 }
 .cta-section .wrapper h2 {
   color: white;
+  -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+          clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  transition: -webkit-clip-path 700ms ease;
+  transition: clip-path 700ms ease;
+  transition: clip-path 700ms ease, -webkit-clip-path 700ms ease;
 }
 .cta-section .wrapper p {
   color: white;
   margin-block: 2rem 3rem;
+  -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+          clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  transition: -webkit-clip-path 700ms ease;
+  transition: clip-path 700ms ease;
+  transition: clip-path 700ms ease, -webkit-clip-path 700ms ease;
+}
+.cta-section .wrapper button {
+  -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+          clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  transition: -webkit-clip-path 700ms ease;
+  transition: clip-path 700ms ease;
+  transition: clip-path 700ms ease, -webkit-clip-path 700ms ease;
+}
+
+.projects-section .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6rem;
+}
+.projects-section .wrapper .projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  -moz-column-gap: 0rem;
+       column-gap: 0rem;
+  row-gap: 8rem;
+  place-items: center;
+  width: 100%;
+}
+.projects-section .wrapper .projects-grid .projects-grid-item {
+  width: 75%;
+  transform: translateY(4rem);
+  opacity: 0;
+}
+.projects-section .wrapper .projects-grid .projects-grid-item .absolute {
+  position: absolute;
+  font-weight: 700;
+  font-family: concrete;
+  writing-mode: vertical-rl;
+  text-orientation: sideways;
+  left: -2rem;
+}
+@media (max-width: 500px) {
+  .projects-section .wrapper .projects-grid .projects-grid-item .absolute {
+    left: -1.1rem;
+    font-size: 12px !important;
+  }
+}
+.projects-section .wrapper .projects-grid .projects-grid-item h3 {
+  margin-block-start: 1rem;
+}
+.projects-section .wrapper .projects-grid .projects-grid-item p {
+  margin-block-start: 0.5rem;
+  max-width: 50ch;
+}
+.projects-section .wrapper .projects-grid .projects-grid-item img {
+  height: 400px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 620px) {
+  .projects-section .wrapper .projects-grid {
+    -moz-column-gap: 2rem;
+         column-gap: 2rem;
+  }
+  .projects-section .wrapper .projects-grid .projects-grid-item {
+    width: 100%;
+  }
+}
+@media (max-width: 400px) {
+  .projects-section .wrapper .projects-grid {
+    grid-template-columns: 1fr;
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
+  }
+  .projects-section .wrapper .projects-grid .projects-grid-item {
+    width: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */

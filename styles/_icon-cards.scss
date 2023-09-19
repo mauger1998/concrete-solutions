@@ -6,6 +6,8 @@
         grid-template-columns: 1fr 1fr 1fr;
         padding-inline:0;
         padding-block:0;
+        max-width:1920px;
+
 
         .icon-card {
             background-color:$white;
@@ -16,7 +18,7 @@
             justify-content: flex-center;
             padding-block:6rem;
             clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
-            transition:clip-path 1000ms ease;
+            transition:clip-path 500ms ease;
 
             &:nth-child(1) {
                 border:1px solid $black;
