@@ -48,18 +48,51 @@ contactButton.forEach((button) => {
 const selectorImages = document.querySelectorAll(".selector-images img")
 const selectorButtons = document.querySelectorAll(".selector-button")
 const answers = document.querySelectorAll(".answer")
+const questions = document.querySelectorAll(".question")
+const selectorTitles = document.querySelectorAll(".question h3")
 
-selectorButtons.forEach((button, index) => {
-  button.addEventListener("mouseenter", (e) => {
-    selectorImages[index].classList.add("active")
-    answers[index].classList.add("active")
 
-  })
-  button.addEventListener("mouseleave", (e) => {
-    selectorImages[index].classList.remove("active")
-    answers[index].classList.remove("active")
+mm.add("(max-width:1078px)", () => {
+  selectorButtons.forEach((button, index) => {
+
+  button.addEventListener("click", (e) => {
+
+    selectorImages[index].classList.toggle("active")
+    answers[index].classList.toggle("active")
+    button.classList.toggle("active") 
+    selectorTitles[index].classList.toggle("active")
+
+
   })
 })
+  })
+
+
+
+
+
+mm.add("(min-width:1079px)", () => {
+
+  selectorButtons.forEach((button, index) => {
+ 
+    button.addEventListener("mouseenter", (e) => {
+      selectorImages[index].classList.add("active")
+      answers[index].classList.add("active")
+      button.classList.add("active") 
+      selectorTitles[index].classList.add("active")
+
+  
+    })
+    button.addEventListener("mouseleave", (e) => {
+      selectorImages[index].classList.remove("active")
+      answers[index].classList.remove("active")
+      button.classList.remove("active") 
+      selectorTitles[index].classList.remove("active")
+
+    })
+  })
+})
+
 
 
 

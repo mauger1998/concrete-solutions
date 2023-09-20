@@ -84,15 +84,26 @@
                     align-items: flex-start;
                     justify-content: space-between;
                     width:100%;
+
+                    &.active {
+                        background-color:$white;
+                        transition:background-color 300ms ease;
+                    }
                     .question {
                         display:flex;
                         align-items: center;
                         justify-content: space-between;
                         width:100%;
 
+                       
+
                         h3 {
                             color:white;
                             transition:color 300ms ease;
+
+                            &.active {
+                                color:black;
+                            }
     
                         }
         
@@ -125,12 +136,7 @@
                         }
                     }
                     &:hover {
-                        background-color:$white;
-                        transition:background-color 300ms ease;
-                        h3 {
-                            color:$black;
-                            transition:color 300ms ease;
-                        }
+                        
 
                         img {
                             transform:rotateZ(0);
