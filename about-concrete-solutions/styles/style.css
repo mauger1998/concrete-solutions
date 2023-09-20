@@ -584,4 +584,49 @@ main .wrapper .hero-text p {
   .cta-section .wrapper .blur {
     width: 90%;
   }
+}
+
+footer .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer .wrapper .footer-top {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  width: 100%;
+  padding-block-end: 4rem;
+}
+footer .wrapper .footer-top .footer-logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer .wrapper .footer-top .footer-logo-container img {
+  width: 150px;
+}
+footer .wrapper .footer-top nav ul {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+footer .wrapper .footer-bottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+  padding-block-start: 4rem;
+  border-block-start: 0.5px solid #000001;
+}
+footer .wrapper .footer-bottom a {
+  font-family: "Darker Grotesque", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+footer .wrapper .footer-bottom a img {
+  width: 150px;
 }/*# sourceMappingURL=style.css.map */

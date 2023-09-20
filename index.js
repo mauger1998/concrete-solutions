@@ -1,11 +1,30 @@
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
+let mm = gsap.matchMedia();
+
+mm.add("(max-width: 1024px)", () => {
 // create the scrollSmoother before your scrollTriggers
-const smoother = ScrollSmoother.create({
-    smooth: 2,               // how long (in seconds) it takes to "catch up" to the native scroll position
-    effects: true,           // looks for data-speed and data-lag attributes on elements
-    smoothTouch: 0.1,        // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
+let smoother = ScrollSmoother.create({
+  smooth: 2,               // how long (in seconds) it takes to "catch up" to the native scroll position
+  effects: true,           // looks for data-speed and data-lag attributes on elements
+  smoothTouch: 0.1,        // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
+  normalizeScroll:true,
+
 });
+})
+mm.add("(min-width: 1023px)", () => {
+// create the scrollSmoother before your scrollTriggers
+let smoother = ScrollSmoother.create({
+  smooth: 2,               // how long (in seconds) it takes to "catch up" to the native scroll position
+  effects: true,           // looks for data-speed and data-lag attributes on elements
+  smoothTouch: 0.1,        // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
+});
+})
+
+
+
+
+
 
 
 window.onload = (event) => {
@@ -170,9 +189,10 @@ contactTimeline.to(".contact-form", {
 const menuOpen = document.querySelector(".open")
 const menuClose = document.querySelector(".close")
 const overlay = document.querySelector(".overlay")
-const contactPress = document.querySelector("header .contact-button")
+const contactPress = document.querySelector(" nav .contact-button")
 const menuLinks = document.querySelectorAll(".overlay ul a")
 const allContent = document.querySelector("html")
+const testingButton = document.querySelector(".testing-button")
 
 
 var timeline = gsap.timeline({defaults:{duration: 1, ease: Back.easeOut.config(2)}})
@@ -187,8 +207,18 @@ menuOpen.addEventListener("click", () => {
   contactPress.style.display = "none"
   allContent.style.overflow = "hidden"
 
-  
+  testingButton.addEventListener("click", (e) => {
+    smoother.scrollTo("#contact", true, "top top" )
+    allContent.style.overflow = "visible"
+
   })
+
+  
+   
+})
+
+  
+
 
   
 
