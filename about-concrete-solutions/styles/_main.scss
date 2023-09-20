@@ -1,12 +1,18 @@
 @use "../../styles/variables" as *;
 
+@keyframes bounce {
+    50% {
+        transform:translateY(-0.5rem);
+    }
+}
+
 main {
     .wrapper {
         display:flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        height:98lvh;
+        height:98svh;
         max-height:1000px;
         padding-block:0rem;
         padding-inline:0;
@@ -30,10 +36,14 @@ main {
             flex-direction: column;
             position:relative;
 
-            & > img {
+            & > svg {
                 width:2rem;
                 position:absolute;
                 bottom:-12rem;
+
+                #circle {
+                    animation: bounce 1500ms forwards ease infinite;
+                }
 
                 @media(max-width:943px) {
                     bottom:-7rem;

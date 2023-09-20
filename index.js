@@ -7,6 +7,25 @@ const smoother = ScrollSmoother.create({
     smoothTouch: 0.1,        // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
 });
 
+
+window.onload = (event) => {
+  console.log("page is fully loaded");
+
+  let urlHash = window.location.href.split("#")[1];
+
+  let scrollElem = document.querySelector("#" + urlHash);
+
+  console.log(scrollElem, urlHash);
+
+  if (urlHash && scrollElem) {
+    gsap.to(smoother, {
+      scrollTop: smoother.offset(scrollElem, "top top"),
+      duration: 1,
+      delay: 0.5
+    });
+  }
+};
+
 // Contact Buttons
 
 const contactButton = document.querySelectorAll(".contact-button")

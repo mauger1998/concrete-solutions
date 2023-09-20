@@ -1,0 +1,185 @@
+@font-face {
+  src: url("../Candide Bold.ttf");
+  font-family: concrete;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+img {
+  width: 100%;
+}
+img.icon {
+  width: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: #000001;
+}
+
+ul {
+  list-style: none;
+}
+
+section,
+main,
+header,
+footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section .wrapper,
+main .wrapper,
+header .wrapper,
+footer .wrapper {
+  width: 100%;
+  max-width: 1440px;
+  padding: 4rem 4rem;
+}
+@media (max-width: 700px) {
+  section .wrapper,
+  main .wrapper,
+  header .wrapper,
+  footer .wrapper {
+    padding-inline: 2rem;
+  }
+}
+@media (max-width: 500px) {
+  section .wrapper,
+  main .wrapper,
+  header .wrapper,
+  footer .wrapper {
+    padding-inline: 1rem;
+  }
+}
+
+h1 {
+  font-size: 112px;
+  line-height: 1.1;
+  color: white;
+  font-weight: 400;
+  font-family: "Libre Baskerville", serif;
+  font-family: concrete;
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 64px;
+  }
+}
+
+h2 {
+  font-size: 32px;
+  line-height: 1.2;
+  font-weight: 400;
+  font-family: "Libre Baskerville", serif;
+  font-family: concrete;
+}
+@media (max-width: 500px) {
+  h2 {
+    font-size: 24px;
+  }
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 1.3;
+  font-weight: 400;
+  font-family: "Libre Baskerville", serif;
+}
+@media (max-width: 500px) {
+  h3 {
+    font-size: 18px;
+  }
+}
+
+p {
+  line-height: 1.6;
+  font-weight: 300;
+  font-size: 16px;
+  font-family: "Darker Grotesque", sans-serif;
+}
+
+li,
+label,
+button {
+  font-family: "Darker Grotesque", sans-serif;
+}
+
+button {
+  background-color: #000001;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 16px;
+  border: 2px solid #000001;
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 2rem;
+  position: relative;
+  line-height: 1;
+  transition: background-color 500ms ease, color 500ms ease;
+  cursor: pointer;
+}
+button span {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: -10%;
+}
+button span svg {
+  width: 2rem;
+  border-radius: 100%;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
+}
+button:hover {
+  background-color: transparent;
+  color: #000001;
+  transition: background-color 500ms ease, color 500ms ease;
+}
+button:hover span svg circle {
+  fill: black;
+  transition: fill 500ms ease;
+}
+button:hover span svg path {
+  fill: white;
+  transition: fill 500ms ease;
+}
+
+.cls-2 {
+  stroke-dashoffset: 1100;
+  stroke-dasharray: 1100;
+  transition: 500ms;
+}
+
+.animated {
+  width: 725px;
+  width: clamp(360px, 50vw, 725px);
+}
+@media (max-width: 430px) {
+  .animated {
+    width: clamp(250px, 50vw, 360px);
+  }
+}
+
+main .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-block: 12rem;
+}
+main .wrapper p {
+  margin-block: 1rem 2rem;
+  max-width: 50ch;
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */

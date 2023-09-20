@@ -127,6 +127,7 @@ button {
   padding: 0.75rem 2rem;
   position: relative;
   line-height: 1;
+  transition: background-color 500ms ease, color 500ms ease;
   cursor: pointer;
 }
 button span {
@@ -140,6 +141,19 @@ button span svg {
   border-radius: 100%;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
 }
+button:hover {
+  background-color: transparent;
+  color: #000001;
+  transition: background-color 500ms ease, color 500ms ease;
+}
+button:hover span svg circle {
+  fill: black;
+  transition: fill 500ms ease;
+}
+button:hover span svg path {
+  fill: white;
+  transition: fill 500ms ease;
+}
 
 header {
   position: absolute;
@@ -147,7 +161,7 @@ header {
 header .header-wrapper {
   width: 100%;
   max-width: 1440px;
-  padding: 1rem 4em;
+  padding: 0.5rem 4em;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -263,12 +277,17 @@ header .header-wrapper .logo-container img {
   }
 }
 
+@keyframes bounce {
+  50% {
+    transform: translateY(-0.5rem);
+  }
+}
 main .wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  height: 98lvh;
+  height: 98svh;
   max-height: 1000px;
   padding-block: 0rem;
   padding-inline: 0;
@@ -290,13 +309,16 @@ main .wrapper .hero-text {
   flex-direction: column;
   position: relative;
 }
-main .wrapper .hero-text > img {
+main .wrapper .hero-text > svg {
   width: 2rem;
   position: absolute;
   bottom: -12rem;
 }
+main .wrapper .hero-text > svg #circle {
+  animation: bounce 1500ms forwards ease infinite;
+}
 @media (max-width: 943px) {
-  main .wrapper .hero-text > img {
+  main .wrapper .hero-text > svg {
     bottom: -7rem;
     width: 1.5rem;
   }
@@ -412,26 +434,18 @@ main .wrapper .hero-text p {
   flex-direction: column;
   align-items: center;
 }
-.about-section .wrapper .content h2 {
-  margin-block-end: 2rem;
-  max-width: 16ch;
-}
-.about-section .wrapper .content h2 > div {
-  overflow: hidden;
-}
-.about-section .wrapper .content h2 > div > div {
-  transform: translateY(8rem);
-}
 .about-section .wrapper .content p {
   max-width: 40ch;
   line-height: 1.6;
   text-align: justify;
-  font-size: 18px;
-  -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
-          clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
-  transition: -webkit-clip-path 500ms ease;
-  transition: clip-path 500ms ease;
-  transition: clip-path 500ms ease, -webkit-clip-path 500ms ease;
+  font-size: 32px;
+  font-weight: 400;
+}
+.about-section .wrapper .content p > div {
+  overflow: hidden;
+}
+.about-section .wrapper .content p > div > div {
+  transform: translateY(8rem);
 }
 .about-section .wrapper .content button {
   margin-block-start: 3rem;

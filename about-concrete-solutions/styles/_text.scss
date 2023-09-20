@@ -11,10 +11,12 @@
 
         .content {
 
-            h2 {
-                margin-block-end:2rem;
-                max-width:16ch;
-
+            p {
+                max-width:40ch;
+                line-height:1.6;
+                text-align:justify;
+                font-size:$h2;
+                font-weight:400;
                 & > div {
                     overflow:hidden;
                 }
@@ -23,16 +25,7 @@
                     transform:translateY(8rem);
                 }
             }
-            p {
-                max-width:40ch;
-                line-height:1.6;
-                text-align:justify;
-                font-size:$mobile-h3;
-                clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
-                transition: clip-path 500ms ease;
-                
-                
-            }
+           
             button {
                 margin-block-start:3rem;
             }

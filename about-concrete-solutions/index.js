@@ -11,6 +11,8 @@ const smoother = ScrollSmoother.create({
 // Hero Text
 
 
+
+
 const heroText = gsap.utils.toArray(".cls-2")
 
 let heroTimeline = gsap.timeline({
@@ -76,9 +78,8 @@ gsap.to(".split > div > div",{
 
         
     },
-    duartion:"0.001s",
     y:0,
-    stagger:0.02,
+    stagger:0.005,
 })
 gsap.to(".content p", {
     scrollTrigger: {

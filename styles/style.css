@@ -127,6 +127,7 @@ button {
   padding: 0.75rem 2rem;
   position: relative;
   line-height: 1;
+  transition: background-color 500ms ease, color 500ms ease;
   cursor: pointer;
 }
 button span {
@@ -139,6 +140,19 @@ button span svg {
   width: 2rem;
   border-radius: 100%;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
+}
+button:hover {
+  background-color: transparent;
+  color: #000001;
+  transition: background-color 500ms ease, color 500ms ease;
+}
+button:hover span svg circle {
+  fill: black;
+  transition: fill 500ms ease;
+}
+button:hover span svg path {
+  fill: white;
+  transition: fill 500ms ease;
 }
 
 header {
@@ -272,7 +286,7 @@ main {
   }
 }
 main .wrapper {
-  height: 98lvh;
+  height: 98svh;
   max-height: 1000px;
   display: flex;
   flex-direction: column;

@@ -1,0 +1,40 @@
+@use "../../styles/variables";
+@use "../../styles/reset";
+@use "../../styles/fonts";
+@use "../../styles/button";
+
+
+.cls-2 {
+    stroke-dashoffset: 1100;
+    stroke-dasharray: 1100;
+    transition:500ms;
+}
+.animated {
+    width:725px;
+    width:clamp(360px, 50vw, 725px);
+
+    
+    @media(max-width:430px) {
+
+       
+            width:clamp(250px, 50vw, 360px);
+
+        
+    }
+}
+
+main {
+    .wrapper {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-block:12rem;
+
+        p {
+            margin-block:1rem 2rem;
+            max-width:50ch;
+            text-align:center;
+        }
+    }
+}

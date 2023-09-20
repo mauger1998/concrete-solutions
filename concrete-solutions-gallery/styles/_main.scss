@@ -3,7 +3,7 @@
 main {
     .wrapper {
         padding-block-start:6rem !important;
-        min-height:98lvh;
+        min-height:98svh;
         max-height:1000px;
         display:flex;
         flex-direction: column;
@@ -73,6 +73,7 @@ main {
         .animated {
             width:725px;
             width:clamp(360px, 50vw, 725px);
+
         }
 
         @media(max-width:430px) {

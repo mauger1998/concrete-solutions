@@ -12,35 +12,82 @@ const smoother = ScrollSmoother.create({
 
 // Hero Text
 
+let mm = gsap.matchMedia();
+
 const heroText = gsap.utils.toArray(".cls-2")
 
-let heroTimeline = gsap.timeline({
-  scrollTrigger: {
-    trigger: heroText,
-    start: "top bottom", // when the top of the trigger hits the top of the viewport
-    scrub:true,
-    end: "clamp(top 50%)",
+mm.add("(min-width: 1350px)", () => {
+  let heroTimeline = gsap.timeline({
+    scrollTrigger: {
+      trigger: heroText,
+      start: "top bottom", // when the top of the trigger hits the top of the viewport
+      scrub:true,
+      end: "clamp(top 55%)",
+  
+    },
+  })
+  let firstTimeline = gsap.timeline({
+  
+  })
+  
+  
+  
+  firstTimeline.to(heroText, {
+    // strokeDasharray:1100,
+    strokeDashoffset:0,
+  })
+  
+  heroTimeline.to(heroText, {
+    // strokeDasharray:1200,
+    strokeDashoffset:0,
+  })
+  .to(heroText, {
+    // strokeDasharray:1100,
+    strokeDashoffset:1200,
+  
+  })
+  
 
-  },
-})
-let firstTimeline = gsap.timeline({
+  return () => { 
+  };
+});
+mm.add("(max-width: 1349px)", () => {
+  let heroTimeline = gsap.timeline({
+    scrollTrigger: {
+      trigger: heroText,
+      start: "top bottom", // when the top of the trigger hits the top of the viewport
+      scrub:true,
+      end: "clamp(top 50%)",
+  
+    },
+  })
+  let firstTimeline = gsap.timeline({
+  
+  })
+  
+  
+  
+  firstTimeline.to(heroText, {
+    // strokeDasharray:1100,
+    strokeDashoffset:0,
+  })
+  
+  heroTimeline.to(heroText, {
+    // strokeDasharray:1200,
+    strokeDashoffset:0,
+  })
+  .to(heroText, {
+    // strokeDasharray:1100,
+    strokeDashoffset:1200,
+  
+  })
+  
 
-})
+  return () => { 
+  };
+});
 
-firstTimeline.to(heroText, {
-  // strokeDasharray:1100,
-  strokeDashoffset:0,
-})
 
-heroTimeline.to(heroText, {
-  // strokeDasharray:1200,
-  strokeDashoffset:0,
-})
-.to(heroText, {
-  // strokeDasharray:1100,
-  strokeDashoffset:1200,
-
-})
 
 
 let URL = "https://h1h8xymr.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type+%3D%3D+%22projects%22%5D+%7C+order%28order%29+%7B+%0A++projectName%2C%0A++%22imgUrlOne%22%3A+imageOne.asset-%3Eurl%2C%0A++%22imgUrlTwo%22%3A+imageTwo.asset-%3Eurl%2C%0A%7D"
@@ -86,6 +133,8 @@ fetch(URL)
       const projectNameTwo = document.createElement("h3")
       projectNameTwo.textContent = result.projectName
       projectGridItemTwo.appendChild(projectNameTwo)
+
+
 
       
     });
