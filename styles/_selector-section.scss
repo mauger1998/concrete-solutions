@@ -33,8 +33,8 @@
             }
         }
         .selector-right-column {
-            display:grid;
-            grid-template-rows: 0.5fr 1fr;
+            display:flex;
+            flex-direction: column;
             height:100%;
 
             .selector-images {
@@ -85,9 +85,39 @@
                     justify-content: space-between;
                     width:100%;
 
+                    .answer {
+                        max-height:0;
+                        overflow:hidden;
+                        transition: max-height 500ms ease;
+
+                        p {
+                            color:white;
+                            margin-block-start:1rem;
+                            transition: color 300ms ease;
+                            
+                        }
+                    }
+
                     &.active {
                         background-color:$white;
                         transition:background-color 300ms ease;
+
+                        .answer {
+                            
+                            
+                                transition:max-height 500ms ease;
+                                max-height:12rem;
+                                p {
+                                    color:black;
+                                    transition: color 300ms ease;
+                                }
+                            
+                        }
+                        .question {
+                            h3 {
+                                color:black;
+                            }
+                        }
                     }
                     .question {
                         display:flex;
@@ -101,9 +131,7 @@
                             color:white;
                             transition:color 300ms ease;
 
-                            &.active {
-                                color:black;
-                            }
+                           
     
                         }
         
@@ -115,34 +143,10 @@
                         }
                     }
 
-                    .answer {
-                        max-height:0;
-                        overflow:hidden;
-                        transition:max-height 500ms ease;
+                    
 
-                       
-                        p {
-                            color:white;
-                            margin-block-start:1rem;
-                            transition: color 300ms ease;
-                            
-                        }
-                        &.active {
-                            max-height:12rem;
-                            p {
-                                color:black;
-                                transition: color 300ms ease;
-                            }
-                        }
-                    }
-                    &:hover {
-                        
-
-                        img {
-                            transform:rotateZ(0);
-                            transition: transform 300ms ease;
-                        }
-                    }
+                    
+                   
 
                    
                 }

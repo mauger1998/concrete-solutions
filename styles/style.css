@@ -127,7 +127,7 @@ button {
   padding: 0.75rem 2rem;
   position: relative;
   line-height: 1;
-  transition: background-color 500ms ease, color 500ms ease;
+  transition: background-color 500ms ease, color 500ms ease !important;
   cursor: pointer;
 }
 button span {
@@ -143,8 +143,8 @@ button span svg {
 }
 button:hover {
   background-color: transparent;
-  color: #000001;
-  transition: background-color 500ms ease, color 500ms ease;
+  color: #ffffff;
+  transition: background-color 500ms ease, color 500ms ease !important;
 }
 button:hover span svg circle {
   fill: black;
@@ -397,8 +397,8 @@ main .wrapper h1 .animated {
   width: 2rem;
 }
 .selector-section .wrapper .selector-right-column {
-  display: grid;
-  grid-template-rows: 0.5fr 1fr;
+  display: flex;
+  flex-direction: column;
   height: 100%;
 }
 .selector-section .wrapper .selector-right-column .selector-images {
@@ -440,9 +440,30 @@ main .wrapper h1 .animated {
   justify-content: space-between;
   width: 100%;
 }
+.selector-section .wrapper .selector-right-column .selector-buttons .selector-button .answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 500ms ease;
+}
+.selector-section .wrapper .selector-right-column .selector-buttons .selector-button .answer p {
+  color: white;
+  margin-block-start: 1rem;
+  transition: color 300ms ease;
+}
 .selector-section .wrapper .selector-right-column .selector-buttons .selector-button.active {
   background-color: #ffffff;
   transition: background-color 300ms ease;
+}
+.selector-section .wrapper .selector-right-column .selector-buttons .selector-button.active .answer {
+  transition: max-height 500ms ease;
+  max-height: 12rem;
+}
+.selector-section .wrapper .selector-right-column .selector-buttons .selector-button.active .answer p {
+  color: black;
+  transition: color 300ms ease;
+}
+.selector-section .wrapper .selector-right-column .selector-buttons .selector-button.active .question h3 {
+  color: black;
 }
 .selector-section .wrapper .selector-right-column .selector-buttons .selector-button .question {
   display: flex;
@@ -454,33 +475,9 @@ main .wrapper h1 .animated {
   color: white;
   transition: color 300ms ease;
 }
-.selector-section .wrapper .selector-right-column .selector-buttons .selector-button .question h3.active {
-  color: black;
-}
 .selector-section .wrapper .selector-right-column .selector-buttons .selector-button .question img {
   width: 2rem;
   transform: rotateZ(90deg);
-  transition: transform 300ms ease;
-}
-.selector-section .wrapper .selector-right-column .selector-buttons .selector-button .answer {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 500ms ease;
-}
-.selector-section .wrapper .selector-right-column .selector-buttons .selector-button .answer p {
-  color: white;
-  margin-block-start: 1rem;
-  transition: color 300ms ease;
-}
-.selector-section .wrapper .selector-right-column .selector-buttons .selector-button .answer.active {
-  max-height: 12rem;
-}
-.selector-section .wrapper .selector-right-column .selector-buttons .selector-button .answer.active p {
-  color: black;
-  transition: color 300ms ease;
-}
-.selector-section .wrapper .selector-right-column .selector-buttons .selector-button:hover img {
-  transform: rotateZ(0);
   transition: transform 300ms ease;
 }
 @media (max-width: 820px) {

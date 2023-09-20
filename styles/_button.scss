@@ -13,7 +13,7 @@ button {
     padding:0.75rem 2rem;
     position:relative;
     line-height:1;
-    transition:background-color 500ms ease, color 500ms ease;;
+    transition:background-color 500ms ease, color 500ms ease !important;
     cursor:pointer;
 
     span {
@@ -34,8 +34,8 @@ button {
 
     &:hover {
         background-color:transparent;
-        color:$black;
-        transition:background-color 500ms ease, color 500ms ease;;
+        color:$white;
+        transition:background-color 500ms ease, color 500ms ease !important;
         span {
             svg {
                 circle {
