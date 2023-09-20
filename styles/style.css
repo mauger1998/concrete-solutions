@@ -487,6 +487,9 @@ main .wrapper h1 .animated {
   .selector-section .wrapper {
     grid-template-columns: 1fr;
   }
+  .selector-section .wrapper .selector-right-column {
+    width: 100%;
+  }
   .selector-section .wrapper .selector-right-column .selector-buttons .selector-button {
     padding-block: 2rem;
   }

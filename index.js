@@ -57,6 +57,13 @@ mm.add("(max-width:1078px)", () => {
 
   button.addEventListener("click", (e) => {
 
+    answers.forEach((answer) => {
+      answer.classList.remove("active")
+    })
+    selectorTitles.forEach((title) => {
+      title.classList.remove("active")
+    })
+
     selectorImages[index].classList.toggle("active")
     answers[index].classList.toggle("active")
     button.classList.toggle("active") 
