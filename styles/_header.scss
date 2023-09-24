@@ -1,143 +1,136 @@
-@use "./variables" as *;
+@use './variables' as *;
 
 header {
-    position:absolute;
+    position: absolute;
     .header-wrapper {
-        width:100%;
-        max-width:1440px;
-        padding:0.5rem 4em;
-        display:flex;
+        width: 100%;
+        max-width: 1440px;
+        padding: 0.5rem 4em;
+        display: flex;
         align-items: center;
         justify-content: space-between;
 
         nav {
-            z-index:10;
+            z-index: 10;
 
             ul {
-                display:flex;
+                display: flex;
                 align-items: center;
-                gap:2rem;
+                gap: 2rem;
 
                 a {
-
                     &:first-child {
-                        border-top:2px solid white;
+                        border-top: 2px solid white;
                     }
 
-                    height:100%;
-                    padding-top:1rem;
+                    height: 100%;
+                    padding-top: 1rem;
                     li {
-                        color:white;
+                        color: white;
                     }
                 }
-
-                
             }
         }
 
         .logo-container {
             // background-color:$white;
-          
+
             img {
-                width:100px;
+                width: 100px;
             }
         }
 
-        @media(max-width:1024px) {
+        @media (max-width: 1024px) {
             nav {
-                display:none;
+                display: none;
             }
             // justify-content: center;
         }
-        @media(max-width:700px) {
-            padding-inline:2rem;
+        @media (max-width: 700px) {
+            padding-inline: 2rem;
         }
-        @media(max-width:500px) {
-            padding-inline:1rem;
+        @media (max-width: 500px) {
+            padding-inline: 1rem;
         }
     }
-    
 }
 
-
 .menu {
-    position:relative;
-    z-index:10000 !important;
-    display:none;
+    position: relative;
+    z-index: 10000 !important;
+    display: none;
 
-    @media(max-width:1024px) {
-        display:block;
+    @media (max-width: 1024px) {
+        display: block;
     }
 
     .open {
-        cursor:pointer !important;
+        cursor: pointer !important;
     }
-   
+
     .overlay {
-        position:fixed;
+        position: fixed;
         // position:relative;
-        z-index:10000 !important;
-        display:flex;
+        z-index: 10000 !important;
+        display: flex;
         align-items: center;
         justify-content: center;
-        gap:6rem;
-        background-color:$black;
-        width:100%;
-        height:100vh;
-        inset:0;
-        padding:4rem;
-        clip-path:circle(0%);
-        opacity:0;
+        gap: 6rem;
+        background-color: $black;
+        width: 100%;
+        height: 100vh;
+        inset: 0;
+        padding: 4rem;
+        clip-path: polygon(0 100%, 75% 100%, 75% 100%, 0% 100%);
+        opacity: 1;
+        transition: clip-path 100ms ease;
 
         ul {
-            display:block;
+            display: block;
             &:last-child {
                 // display:none;
             }
         }
 
         button {
-            color:white !important;
+            color: white !important;
         }
         .close {
-            cursor:pointer !important;
-            z-index:10000 !important;
-            display:block !important;
+            cursor: pointer !important;
+            z-index: 10000 !important;
+            display: block !important;
         }
 
-
         button {
-            background-color:transparent;
-            border:none;
-            position:absolute;
-            top:4rem;
-            right:4rem;
-            font-size:2rem;
-            color:white;
-            z-index:1000000 !important;
-
+            background-color: transparent;
+            border: none;
+            position: absolute;
+            top: 4rem;
+            right: 4rem;
+            font-size: 2rem;
+            color: white;
+            z-index: 1000000 !important;
         }
 
         ul {
-            display:flex;
+            display: flex;
             flex-direction: column;
             align-items: flex-start;
-            gap:2rem;
+            gap: 2rem;
             li {
-                color:white !important;
-                font-weight:700;
+                color: white !important;
+                font-weight: 700;
             }
         }
     }
-    @media (max-width:500px) {
+    @media (max-width: 500px) {
         .overlay {
             flex-direction: column;
             align-items: flex-start;
         }
     }
 
-
-    @media(max-width:1024px) {
+    @media (max-width: 1024px) {
         .overlay {
             ul {
                 &:nth-of-type(1),
@@ -145,10 +138,8 @@ header {
                     // display:none;
                 }
                 &:last-child {
-                    display:flex;
+                    display: flex;
                 }
-
-                
             }
         }
     }

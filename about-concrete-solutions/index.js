@@ -175,13 +175,20 @@ const menuLinks = document.querySelectorAll('.overlay ul a')
 const allContent = document.querySelector('body')
 
 var timeline = gsap.timeline({
-    defaults: { duration: 1, ease: Back.easeOut.config(2) },
+    defaults: { duration: 0.1, ease: Back.easeOut.config(1) },
 })
 
 timeline.paused(true)
 
-timeline.to('.overlay', { clipPath: 'circle(100%)', opacity: 1 })
-
+timeline
+    .to('.overlay', {
+        clipPath: 'polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%)',
+        opacity: 1,
+    })
+    .to('.overlay', {
+        clipPath: 'polygon(0 0, 100% 0%, 100% 100%, 0% 100%)',
+        opacity: 1,
+    })
 menuOpen.addEventListener('click', () => {
     timeline.play()
     contactPress.style.pointerEvents = 'none'
