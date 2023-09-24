@@ -434,17 +434,26 @@ main .wrapper .hero-text p {
   flex-direction: column;
   align-items: center;
 }
-.about-section .wrapper .content p {
-  max-width: 40ch;
-  line-height: 1.6;
-  text-align: justify;
-  font-size: 32px;
-  font-weight: 400;
-}
-.about-section .wrapper .content p > div {
+.about-section .wrapper .content .text > h2 > div {
+  background: linear-gradient(to right, black 50%, rgb(164, 163, 163) 50%);
+  background-size: 200% 100%;
+  background-position-x: 100%;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-size: 64px;
+  line-height: 1.2;
+  font-weight: 700;
+  font-family: "Darker Grotesque", sans-serif;
   overflow: hidden;
+  max-width: 60ch;
 }
-.about-section .wrapper .content p > div > div {
+@media (max-width: 700px) {
+  .about-section .wrapper .content .text > h2 > div {
+    font-size: 32px;
+  }
+}
+.about-section .wrapper .content .text > h2 > div > div {
   transform: translateY(8rem);
 }
 .about-section .wrapper .content button {
@@ -629,4 +638,8 @@ footer .wrapper .footer-bottom a {
 }
 footer .wrapper .footer-bottom a img {
   width: 150px;
+}
+
+.hidden {
+  overflow: hidden;
 }/*# sourceMappingURL=style.css.map */

@@ -120,6 +120,10 @@
                             h3 {
                                 color:black;
                             }
+                            img {
+                                transform:rotateZ(180deg) !important;
+                                transition: transform 500ms ease;
+                            }
                         }
                     }
                     .question {

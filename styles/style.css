@@ -467,6 +467,10 @@ main .wrapper h1 .animated {
 .selector-section .wrapper .selector-right-column .selector-buttons .selector-button.active .question h3 {
   color: black;
 }
+.selector-section .wrapper .selector-right-column .selector-buttons .selector-button.active .question img {
+  transform: rotateZ(180deg) !important;
+  transition: transform 500ms ease;
+}
 .selector-section .wrapper .selector-right-column .selector-buttons .selector-button .question {
   display: flex;
   align-items: center;

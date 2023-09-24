@@ -292,7 +292,7 @@ contactTimeline.to(".blur", {
 const menuOpen = document.querySelector(".open")
 const menuClose = document.querySelector(".close")
 const overlay = document.querySelector(".overlay")
-const contactPress = document.querySelector("header .contact-button")
+const contactPress = document.querySelector("nav .contact-button")
 const menuLinks = document.querySelectorAll(".overlay ul a")
 const allContent = document.querySelector("html")
 
