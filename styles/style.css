@@ -409,6 +409,7 @@ main .wrapper h1 .animated {
 }
 .selector-section .wrapper .selector-right-column .selector-images img {
   height: 100%;
+  max-height: 350px;
   -o-object-fit: cover;
      object-fit: cover;
   transition: opacity 500ms ease;
@@ -432,7 +433,7 @@ main .wrapper h1 .animated {
   height: 100%;
 }
 .selector-section .wrapper .selector-right-column .selector-buttons .selector-button {
-  background-color: #1A1A1A;
+  background-color: #1a1a1a;
   height: 100%;
   cursor: pointer;
   transition: background-color 300ms ease;
