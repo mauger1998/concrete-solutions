@@ -48,7 +48,6 @@ mm.add('(max-width: 1349px)', () => {
             start: 'top bottom', // when the top of the trigger hits the top of the viewport
             scrub: true,
             end: 'clamp(top 65%)',
-            markers: true,
         },
     })
     let firstTimeline = gsap.timeline({})
