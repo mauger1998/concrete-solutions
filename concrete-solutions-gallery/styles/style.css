@@ -281,7 +281,7 @@ header .header-wrapper .logo-container img {
 main .wrapper {
   padding-block-start: 0rem !important;
   margin-block-start: 6rem;
-  height: 97vh;
+  height: 97svh;
   max-height: 1000px;
   display: flex;
   flex-direction: column;
