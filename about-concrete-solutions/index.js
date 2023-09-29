@@ -143,6 +143,7 @@ timeline
     .to('.overlay', {
         clipPath: 'polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%)',
         opacity: 1,
+        pointerEvents: 'all',
     })
     .to('.overlay', {
         clipPath: 'polygon(0 0, 100% 0%, 100% 100%, 0% 100%)',
