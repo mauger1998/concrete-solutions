@@ -585,6 +585,8 @@ html {
   overflow-x: hidden;
 }
 
-#smooth-content {
+#smooth-content,
+.swiper,
+body {
   overflow-x: hidden;
 }/*# sourceMappingURL=style.css.map */
