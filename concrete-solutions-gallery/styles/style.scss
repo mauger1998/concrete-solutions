@@ -1,10 +1,13 @@
-@use "../../styles/variables";
-@use "../../styles/reset";
-@use "../../styles/fonts";
-@use "../../styles/button";
-@use "./header";
-@use "./main";
-@use "./cta";
-@use "./projects";
-@use "./footer";
+@use '../../styles/variables';
+@use '../../styles/reset';
+@use '../../styles/fonts';
+@use '../../styles/button';
+@use './header';
+@use './main';
+@use './cta';
+@use './projects';
+@use './footer';
 
+html {
+    overflow-x: hidden;
+}

@@ -579,4 +579,8 @@ footer .wrapper .footer-bottom a {
 }
 footer .wrapper .footer-bottom a img {
   width: 150px;
+}
+
+html {
+  overflow-x: hidden;
 }/*# sourceMappingURL=style.css.map */
