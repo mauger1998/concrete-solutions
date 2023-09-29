@@ -1,253 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Projects | Concrete Solutions Guernsey Gallery</title>
+    <head>
+        <!-- Google tag (gtag.js) -->
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-2SNTY9F1BJ"></script>
+        <script>
+            window.dataLayer = window.dataLayer || []
+            function gtag() {
+                dataLayer.push(arguments)
+            }
+            gtag('js', new Date())
 
-    <!-- Links -->
-    <link rel="stylesheet" href="styles/style.css">
-    <script src="index.js" defer></script>
-    <link rel="shortcut icon" href="../public/images/concrete-logo-svg.svg" type="image/x-icon">
-    <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
-    />
+            gtag('config', 'G-2SNTY9F1BJ')
+        </script>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Our Projects | Concrete Solutions Guernsey Gallery</title>
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700;800;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+        <!-- Links -->
+        <link rel="stylesheet" href="styles/style.css" />
+        <script src="index.js" defer></script>
+        <link
+            rel="shortcut icon"
+            href="../public/images/concrete-logo-svg.svg"
+            type="image/x-icon" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 
-     <!-- Meta Tags -->
-     <meta name="description" content="Explore our portfolio of concrete and construction projects in Guernsey. See how our mastery of the trade and client-centered approach have contributed to some of the biggest construction jobs in Guernsey.">
-     <meta name="keywords" content="Concrete Projects, Guernsey Construction Gallery, Successful Projects, Construction Portfolio, Concrete Design Showcase, Groundwork Examples, Steelwork Projects, Formwork Portfolio, Waterproofing Success, Drainage Installations, Construction Achievements, Project Gallery, Concrete Work, Groundwork Images, Steelwork Designs, Formwork Examples, Waterproofing Installations, Drainage Projects, Construction Gallery, Completed Projects">
-     <meta name="author" content="Island Web Design | Guernsey & Jersey">
-     <meta property="og:description" content="Explore our portfolio of concrete and construction projects in Guernsey. See how our mastery of the trade and client-centered approach have contributed to some of the biggest construction jobs in Guernsey.">
-     <meta property="og:title" content="Concrete Solutions Guernsey | Expert Concrete, Groundwork & More">
-     <meta property="og:type" content="website">
-     <meta property="og:url" content="https://concretesolutions.gg/concrete-solutions-gallery/">
-     <meta name="twitter:card" content="summary">
-     <meta name="twitter:site" content="">
-     <meta name="twitter:title" content="Concrete Solutions Guernsey | Expert Concrete, Groundwork & More">
-     <meta name="twitter:description" content="Explore our portfolio of concrete and construction projects in Guernsey. See how our mastery of the trade and client-centered approach have created innovative solutions for our valued clients.">
-     <meta name="twitter:image" content="https://concretesolutions.gg/concrete-solutions-og.png">
- 
-     <link rel="canonical" href="https://concretesolutions.gg/concrete-solutions-gallery/">
- 
-     <meta property="og:image" content="https://concretesolutions.gg/concrete-solutions-og.png" />
-     <meta property="og:image:secure_url" content="https://concretesolutions.gg/concrete-solutions-og.png" />
-     <meta property="og:image:type" content="image/png" />
-     <meta property="og:image:width" content="1200" />
-     <meta property="og:image:height" content="600" />
-     <meta property="og:image:alt" content=""/>
-</head>
-</head>
-<body>
-    <div id="smooth-content">
-        <header>
-            <div class="header-wrapper">
-                <div class="logo-container">
-                    <a href="../"><img src="../public/concrete-logo-svg.svg" alt="Concrete Solutions Logo"></a>
-                </div>
-                <div class="menu">
-                    <svg class="open" width="40" viewBox="0 0 24 24" fill="none">
-                        <g id="Menu / Menu_Alt_05">
-                        <path id="Vector" d="M5 17H13M5 12H19M11 7H19" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </g>
-                    </svg>
-                    <div class="overlay">
-                        <button class="close">X</button>
-                        <ul>
-                            <a href="../">
-                                <li>Home</li>
-                            </a>
-                            <a href="">
-                                <li>Gallery</li>
-                            </a>
-                            <a href="../about-concrete-solutions/">
-                                <li>About</li>
-                            </a>
-                            
-                           
-                            <a style="cursor:pointer;" class="testing-button" href="../#contact" >
-                               
-                                <li>Contact</li>
-                            
-                        </a>
-                        </ul>
-                    </div>
-                </div>
-                <nav>
-                    <ul>
-                        <a href="../">
-                            <li>Home</li>
-                        </a>
-                         <a href="">
-                            <li>Gallery</li>
-                        </a>
-                        <a href="../about-concrete-solutions/">
-                            <li>About</li>
-                        </a>
-                       
-                        
-                        <a href="../#contact">
-                            <button class="contact-button">
-                                Contact Us
-                                <span>
-                                    <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <g id="Group 18">
-                                        <circle class="circle" id="Ellipse 15" cx="14.0396" cy="13.9736" r="13.9487" transform="rotate(90 14.0396 13.9736)" fill="white"/>
-                                        <path id="Arrow 2" d="M7.93115 13.2236C7.51694 13.2236 7.18115 13.5594 7.18115 13.9736C7.18115 14.3878 7.51694 14.7236 7.93115 14.7236L7.93115 13.2236ZM20.6786 14.504C20.9715 14.2111 20.9715 13.7362 20.6786 13.4433L15.9057 8.67033C15.6128 8.37744 15.1379 8.37744 14.845 8.67033C14.5521 8.96323 14.5521 9.4381 14.845 9.73099L19.0877 13.9736L14.845 18.2163C14.5521 18.5092 14.5521 18.984 14.845 19.2769C15.1379 19.5698 15.6128 19.5698 15.9057 19.2769L20.6786 14.504ZM7.93115 14.7236L20.1483 14.7236L20.1483 13.2236L7.93115 13.2236L7.93115 14.7236Z" fill="black"/>
-                                        </g>
-                                    </svg>
-                                </span>
-                            </button>
-                        </a>
-                    </ul>
-                </nav>
-            </div>
-        </header>
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700;800;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+            rel="stylesheet" />
 
-        <main>
-            <div class="wrapper">
-                <div class="swiper">
-                    <div class="swiper-wrapper">
-                      <div class="swiper-slide">
-                        <img src="../public/images/swiper1.png" alt="Concrete Solutions doing Groundworks">
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="../public/images/swiper2.png" alt="Concrete Solutions doing Groundworks">
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="../public/images/swiper1.png" alt="Concrete Solutions doing Groundworks">
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="../public/images/swiper2.png" alt="Concrete Solutions doing Groundworks">
-                      </div>
-                    </div>
+        <!-- Meta Tags -->
+        <meta
+            name="description"
+            content="Explore our portfolio of concrete and construction projects in Guernsey. See how our mastery of the trade and client-centered approach have contributed to some of the biggest construction jobs in Guernsey." />
+        <meta
+            name="keywords"
+            content="Concrete Projects, Guernsey Construction Gallery, Successful Projects, Construction Portfolio, Concrete Design Showcase, Groundwork Examples, Steelwork Projects, Formwork Portfolio, Waterproofing Success, Drainage Installations, Construction Achievements, Project Gallery, Concrete Work, Groundwork Images, Steelwork Designs, Formwork Examples, Waterproofing Installations, Drainage Projects, Construction Gallery, Completed Projects" />
+        <meta name="author" content="Island Web Design | Guernsey & Jersey" />
+        <meta
+            property="og:description"
+            content="Explore our portfolio of concrete and construction projects in Guernsey. See how our mastery of the trade and client-centered approach have contributed to some of the biggest construction jobs in Guernsey." />
+        <meta
+            property="og:title"
+            content="Concrete Solutions Guernsey | Expert Concrete, Groundwork & More" />
+        <meta property="og:type" content="website" />
+        <meta
+            property="og:url"
+            content="https://concretesolutions.gg/concrete-solutions-gallery/" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="" />
+        <meta
+            name="twitter:title"
+            content="Concrete Solutions Guernsey | Expert Concrete, Groundwork & More" />
+        <meta
+            name="twitter:description"
+            content="Explore our portfolio of concrete and construction projects in Guernsey. See how our mastery of the trade and client-centered approach have created innovative solutions for our valued clients." />
+        <meta
+            name="twitter:image"
+            content="https://concretesolutions.gg/concrete-solutions-og.png" />
 
-                    <!-- <div class="swiper-pagination"></div> -->
-                    <div class="swiper-button-prev">
-                        <img src="../public/left-arrow-next-svgrepo-com.svg" alt="Swiper Left Arrow">
-                    </div>
-                    <div class="swiper-button-next">
-                        <img src="../public/right-arrow-next-svgrepo-com.svg" alt="Swiper Right Arrow">
-                    </div>
-                  
-                    <!-- <div class="swiper-scrollbar"></div> -->
-                </div>
-                <h1>
-                    <span>
-                        CONCRETE SOLUTIONS
-                    </span>
-                    <svg class="animated" id="Layer_2" data-name="Layer 2" viewBox="0 0 1295.81 209.67">
-                      <defs>
-                        <style>
-                          .cls-2 {
-                            fill: none;
-                            stroke: #000;
-                            stroke-miterlimit: 10;
-                            stroke-width: 3px;
-                          }
-                        </style>
-                      </defs>
-                      <g id="Layer_1-2" data-name="Layer 1">
-                        <g>
-                          <path class="cls-2" d="m167.01,202.5c-11.93,1.19-22.07,2.68-25.35,2.98-8.95,1.79-20.58,2.68-34.89,2.68C38.78,208.17,1.5,170.29,1.5,103.49S43.25,1.5,115.72,1.5c21.77,0,38.77,2.09,51.59,6.56,8.65,3.28,12.23,5.37,12.23,12.23,0,7.75-2.09,18.49-5.96,32.51h-1.79c-2.68-9.84-6.56-17.3-11.03-22.37-9.24-9.84-23.56-14.91-42.94-14.91-44.43,0-66.5,28.33-66.5,85.29s19.98,92.75,61.73,92.75c8.65,0,14.61-1.19,17.6-3.88,2.09-1.49,2.98-6.26,2.98-13.72v-22.07c0-14.91-1.19-24.16-3.58-27.73-2.68-3.58-7.75-6.56-15.81-8.95v-1.79h78.73v1.79c-6.26,1.79-10.14,4.47-12.23,8.05-2.09,3.88-3.28,13.42-3.28,28.33v21.17c0,11.63.6,20.28,2.09,26.24-2.39.3-6.56.6-12.52,1.49Z"/>
-                          <path class="cls-2" d="m255.89,204.29h-56.96v-1.79c3.88-.9,6.86-2.09,9.25-4.18,4.77-3.28,9.24-10.74,13.72-22.37l45.63-123.46c3.88-10.44,9.54-26.24,16.7-47.12h31.31l15.81,44.73,45.33,124.06c4.17,11.03,8.35,18.49,12.23,22.37,2.39,2.68,6.26,4.47,11.93,5.96v1.79h-85.29v-1.79c6.26-1.19,11.03-2.98,13.72-5.07,2.68-2.09,3.88-4.77,3.88-8.05s-1.49-9.24-4.77-17.89l-12.23-34.3h-62.33l-11.93,36.08c-2.39,7.46-3.58,13.42-3.58,17.3,0,2.68,1.19,4.77,3.88,6.86s7.46,3.88,13.72,5.07v1.79Zm56.06-82.31l-26.54-79.33c-2.09,7.16-11.03,33.7-26.54,79.33h53.08Z"/>
-                          <path class="cls-2" d="m413.95,204.29v-1.79c5.67-1.79,10.74-4.47,15.81-8.05,2.98-2.09,4.47-9.24,4.47-20.88V43.25c0-14.61-1.19-23.86-3.58-27.44-2.09-3.28-7.75-6.26-16.7-8.65v-1.79h86.48v1.79c-9.54,2.68-15.51,5.07-17.89,7.75-3.88,4.47-4.47,9.24-4.47,28.03v131.51c0,11.03,2.39,14.91,14.31,14.91h30.12c12.53,0,21.17-2.09,25.65-5.96,4.17-3.58,9.25-12.23,14.91-25.65h1.79c0,1.19,0,4.47-.3,10.14-.3,11.03-.89,21.77-1.19,26.54-.89,8.65-2.39,9.84-9.24,9.84h-140.16Z"/>
-                          <path class="cls-2" d="m576.78,204.29v-1.79c5.67-1.79,10.74-4.47,15.81-8.05,2.98-2.09,4.47-9.24,4.47-20.88V43.25c0-14.61-1.19-23.86-3.58-27.44-2.09-3.28-7.75-6.26-16.7-8.65v-1.79h86.48v1.79c-9.54,2.68-15.51,5.07-17.89,7.75-3.88,4.47-4.47,9.24-4.47,28.03v131.51c0,11.03,2.38,14.91,14.31,14.91h30.12c12.53,0,21.17-2.09,25.65-5.96,4.17-3.58,9.24-12.23,14.91-25.65h1.79c0,1.19,0,4.47-.3,10.14-.3,11.03-.89,21.77-1.19,26.54-.89,8.65-2.39,9.84-9.25,9.84h-140.16Z"/>
-                          <path class="cls-2" d="m739.61,204.29v-1.79c7.46-2.09,12.82-4.47,16.1-7.75,2.68-2.68,4.17-9.84,4.17-21.17V39.97c0-13.72-1.19-22.07-3.88-24.75-3.28-3.88-8.95-6.56-16.4-8.05v-1.79h134.5c5.96,0,7.46,1.79,7.46,7.75,0,6.26-.89,17-2.39,32.51h-1.79c-4.77-13.72-10.74-21.47-17.89-23.26-4.77-1.49-11.03-2.09-18.79-2.09h-28.33c-6.86,0-8.65,2.09-8.65,8.95v63.82h21.47c10.14,0,18.19-.89,24.16-2.39,9.84-2.39,11.93-5.96,16.4-19.38h1.79v57.26h-1.79c-3.28-12.82-6.86-17.3-18.49-19.38-5.07-.9-12.23-1.19-21.77-1.19h-21.77v66.2c0,11.03,2.38,15.21,14.31,15.21h31.31c11.63,0,19.98-2.09,24.75-5.96,4.47-3.88,9.25-12.23,14.61-25.65h1.79c0,3.88-.6,31.01-1.49,38.77-.89,6.86-2.68,7.75-10.14,7.75h-139.27Z"/>
-                          <path class="cls-2" d="m995.78,204.29h-85.89v-1.79c8.35-2.09,14.02-5.37,17-9.25,2.09-3.58,3.28-12.82,3.28-27.73V43.25c0-14.91-1.19-24.16-3.28-27.44-2.09-3.28-7.75-5.96-17-8.65v-1.79h73.66c18.79,0,33.7.89,44.73,2.68,29.52,5.07,44.73,20.88,44.73,50.7,0,25.94-17.3,42.94-40.86,50.4,4.77,2.68,9.24,6.86,15.51,16.4,3.28,4.47,5.96,8.95,8.35,12.82l11.03,18.19,12.82,20.58c9.54,15.51,16.7,22.07,26.54,24.45v1.49c-14.02,1.49-25.35,2.39-34,2.39-14.02,0-23.56-1.79-28.63-5.67-6.26-4.77-12.82-14.31-19.68-28.63l-22.37-44.73c-3.28-5.67-8.65-8.65-16.7-8.65h-11.03v48.91c0,14.61,1.19,23.56,3.88,26.84,2.98,3.28,8.95,6.26,17.89,8.95v1.79Zm-21.77-101.1h9.84c12.23,0,21.47-2.39,27.73-6.86,8.95-6.86,13.42-18.49,13.42-34.59,0-20.58-5.37-33.1-16.4-38.17-6.56-2.68-13.72-4.18-21.17-4.18h-4.77c-7.16,0-8.65,2.39-8.65,10.74v73.06Z"/>
-                          <path class="cls-2" d="m1240.93,204.29h-84.99v-1.79c8.65-2.09,14.31-5.37,17-9.25,2.09-3.58,3.28-12.52,3.28-26.54v-50.7l-53.08-87.97c-4.77-8.05-9.25-13.42-13.12-16.7-2.98-2.39-5.96-3.88-8.65-4.18v-1.79h85.29v1.79c-5.37,1.19-9.25,2.39-11.63,3.88-2.39,1.79-3.58,3.58-3.58,5.67,0,2.98,1.49,7.16,4.77,12.82,17.89,30.42,30.42,51.89,37.58,64.71l5.67-10.14c5.07-8.65,17-28.93,29.82-51.29,3.58-5.96,5.37-11.03,5.37-14.91,0-2.39-1.19-4.47-3.88-6.26-3.58-2.09-6.86-3.58-10.14-4.47v-1.79h53.68v1.79c-3.28.89-6.86,2.98-10.14,5.67-3.28,3.28-7.46,8.35-12.23,15.81l-51.59,82.31v55.77c0,15.21,1.19,24.16,3.88,26.84,2.68,3.28,8.35,6.26,16.7,8.95v1.79Z"/>
-                        </g>
-                      </g>
-                    </svg>
-                </h1>
+        <link
+            rel="canonical"
+            href="https://concretesolutions.gg/concrete-solutions-gallery/" />
 
-            </div>
-        </main>
+        <meta
+            property="og:image"
+            content="https://concretesolutions.gg/concrete-solutions-og.png" />
+        <meta
+            property="og:image:secure_url"
+            content="https://concretesolutions.gg/concrete-solutions-og.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="600" />
+        <meta property="og:image:alt" content="" />
+    </head>
+    <body>
+        <div id="smooth-content">
+            <header>
+                <div class="header-wrapper">
+                    <div class="logo-container">
+                        <a href="../"
+                            ><img
+                                src="../public/concrete-logo-svg.svg"
+                                alt="Concrete Solutions Logo"
+                        /></a>
+                    </div>
+                    <div class="menu">
+                        <svg
+                            class="open"
+                            width="40"
+                            viewBox="0 0 24 24"
+                            fill="none">
+                            <g id="Menu / Menu_Alt_05">
+                                <path
+                                    id="Vector"
+                                    d="M5 17H13M5 12H19M11 7H19"
+                                    stroke="#000000"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </g>
+                        </svg>
+                        <div class="overlay">
+                            <button class="close">X</button>
+                            <ul>
+                                <a href="../">
+                                    <li>Home</li>
+                                </a>
+                                <a href="">
+                                    <li>Gallery</li>
+                                </a>
+                                <a href="../about-concrete-solutions/">
+                                    <li>About</li>
+                                </a>
 
-        <section class="projects-section">
-            <div class="wrapper">
-                <div class="projects-title">
-                    <h2>Our projects</h2>
-                </div>
-                <div class="projects-grid">
-                    <div class="projects-grid-item">
-                        <p class="absolute">Projects</p>
-                        <img src="../public/images/projects-one.png" alt="Concrete Solutions Project">
-                        <h3>Courtil De Pierre</h3>
-                    </div>
-                    <div class="projects-grid-item">
-                        <p class="absolute">Projects</p>
-                        <img src="../public/images/projects-two.png" alt="Concrete Solutions Project">
-                        <h3>Courtil De Pierre</h3>
-                    </div>
-                    <div class="projects-grid-item">
-                        <p class="absolute">Projects</p>
-                        <img src="../public/images/projects-three.png" alt="Concrete Solutions Project">
-                        <h3>Roseville</h3>
-                    </div>
-                    <div class="projects-grid-item">
-                        <p class="absolute">Projects</p>
-                        <img src="../public/images/projects-four.png" alt="Concrete Solutions Project">
-                        <h3>Roseville</h3>
-                    </div>
-                    <div class="projects-grid-item">
-                        <p class="absolute">Projects</p>
-                        <img src="../public/images/projects-five.png" alt="Concrete Solutions Project">
-                        <h3>Castle Construction St Martins</h3>
-                    </div>
-                    <div class="projects-grid-item">
-                        <p class="absolute">Projects</p>
-                        <img src="../public/images/projects-six.png" alt="Concrete Solutions Project">
-                        <h3>Castle Construction St Martins</h3>
-                    </div>
-                    <div class="projects-grid-item">
-                        <p class="absolute">Projects</p>
-                        <img src="../public/images/projects-seven.png" alt="Concrete Solutions Project">
-                        <h3>Forest</h3>
-                    </div>
-                    <div class="projects-grid-item">
-                        <p class="absolute">Projects</p>
-                        <img src="../public/images/projects-eight.png" alt="Concrete Solutions Project">
-                        <h3>Forest</h3>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-       
-
-        <section class="cta-section">
-            <div class="wrapper">
-                <div class="blur">
-                    <h2>Contact us now</h2>
-                    <p>Discover the Difference Today. Experience the excellence of Concrete Solutions Guernsey. Reach out to us through the form to discuss your upcoming project. </p>
-                    <a href="../#contact">
-                        <button class="contact-button">
-                            Contact Us
-                            <span>
-                                <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g id="Group 18">
-                                    <circle class="circle" id="Ellipse 15" cx="14.0396" cy="13.9736" r="13.9487" transform="rotate(90 14.0396 13.9736)" fill="white"/>
-                                    <path id="Arrow 2" d="M7.93115 13.2236C7.51694 13.2236 7.18115 13.5594 7.18115 13.9736C7.18115 14.3878 7.51694 14.7236 7.93115 14.7236L7.93115 13.2236ZM20.6786 14.504C20.9715 14.2111 20.9715 13.7362 20.6786 13.4433L15.9057 8.67033C15.6128 8.37744 15.1379 8.37744 14.845 8.67033C14.5521 8.96323 14.5521 9.4381 14.845 9.73099L19.0877 13.9736L14.845 18.2163C14.5521 18.5092 14.5521 18.984 14.845 19.2769C15.1379 19.5698 15.6128 19.5698 15.9057 19.2769L20.6786 14.504ZM7.93115 14.7236L20.1483 14.7236L20.1483 13.2236L7.93115 13.2236L7.93115 14.7236Z" fill="black"/>
-                                    </g>
-                                </svg>
-                            </span>
-                        </button>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <footer>
-            <div class="wrapper">
-                <div class="footer-top">
-                    <div class="footer-logo-container">
-                        <a href=""><img src="../public/concrete-logo-svg copy.svg" alt="Concrete Solutions Logo"></a>
+                                <a
+                                    style="cursor: pointer"
+                                    class="testing-button"
+                                    href="../#contact">
+                                    <li>Contact</li>
+                                </a>
+                            </ul>
+                        </div>
                     </div>
                     <nav>
                         <ul>
@@ -260,29 +141,277 @@
                             <a href="../about-concrete-solutions/">
                                 <li>About</li>
                             </a>
-                            
+
                             <a href="../#contact">
-                                <li>Contact</li>
+                                <button class="contact-button">
+                                    Contact Us
+                                    <span>
+                                        <svg
+                                            viewBox="0 0 28 28"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g id="Group 18">
+                                                <circle
+                                                    class="circle"
+                                                    id="Ellipse 15"
+                                                    cx="14.0396"
+                                                    cy="13.9736"
+                                                    r="13.9487"
+                                                    transform="rotate(90 14.0396 13.9736)"
+                                                    fill="white" />
+                                                <path
+                                                    id="Arrow 2"
+                                                    d="M7.93115 13.2236C7.51694 13.2236 7.18115 13.5594 7.18115 13.9736C7.18115 14.3878 7.51694 14.7236 7.93115 14.7236L7.93115 13.2236ZM20.6786 14.504C20.9715 14.2111 20.9715 13.7362 20.6786 13.4433L15.9057 8.67033C15.6128 8.37744 15.1379 8.37744 14.845 8.67033C14.5521 8.96323 14.5521 9.4381 14.845 9.73099L19.0877 13.9736L14.845 18.2163C14.5521 18.5092 14.5521 18.984 14.845 19.2769C15.1379 19.5698 15.6128 19.5698 15.9057 19.2769L20.6786 14.504ZM7.93115 14.7236L20.1483 14.7236L20.1483 13.2236L7.93115 13.2236L7.93115 14.7236Z"
+                                                    fill="black" />
+                                            </g>
+                                        </svg>
+                                    </span>
+                                </button>
                             </a>
                         </ul>
                     </nav>
                 </div>
-                <div class="footer-bottom">
-                    <a target="_blank" rel="external dofollow author" href="https://islandwebdesign.net/">
-                        Designed by...
-                        <img src="../black-island-logo.svg" alt="Island Web Design Guernsey and Jersey Logo">
-                    </a>
-                    <p>All Rights Reserved 2023</p>
-                </div>
-            </div>
-        </footer>
+            </header>
 
-    
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="../ScrollSmoother.min.js"></script>
-    
-</body>
+            <main>
+                <div class="wrapper">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img
+                                    src="../public/images/swiper1.png"
+                                    alt="Concrete Solutions doing Groundworks" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img
+                                    src="../public/images/swiper2.png"
+                                    alt="Concrete Solutions doing Groundworks" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img
+                                    src="../public/images/swiper1.png"
+                                    alt="Concrete Solutions doing Groundworks" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img
+                                    src="../public/images/swiper2.png"
+                                    alt="Concrete Solutions doing Groundworks" />
+                            </div>
+                        </div>
+
+                        <!-- <div class="swiper-pagination"></div> -->
+                        <div class="swiper-button-prev">
+                            <img
+                                src="../public/left-arrow-next-svgrepo-com.svg"
+                                alt="Swiper Left Arrow" />
+                        </div>
+                        <div class="swiper-button-next">
+                            <img
+                                src="../public/right-arrow-next-svgrepo-com.svg"
+                                alt="Swiper Right Arrow" />
+                        </div>
+
+                        <!-- <div class="swiper-scrollbar"></div> -->
+                    </div>
+                    <h1>
+                        <span> CONCRETE SOLUTIONS </span>
+                        <svg
+                            class="animated"
+                            id="Layer_2"
+                            data-name="Layer 2"
+                            viewBox="0 0 1295.81 209.67">
+                            <defs>
+                                <style>
+                                    .cls-2 {
+                                        fill: none;
+                                        stroke: #000;
+                                        stroke-miterlimit: 10;
+                                        stroke-width: 3px;
+                                    }
+                                </style>
+                            </defs>
+                            <g id="Layer_1-2" data-name="Layer 1">
+                                <g>
+                                    <path
+                                        class="cls-2"
+                                        d="m167.01,202.5c-11.93,1.19-22.07,2.68-25.35,2.98-8.95,1.79-20.58,2.68-34.89,2.68C38.78,208.17,1.5,170.29,1.5,103.49S43.25,1.5,115.72,1.5c21.77,0,38.77,2.09,51.59,6.56,8.65,3.28,12.23,5.37,12.23,12.23,0,7.75-2.09,18.49-5.96,32.51h-1.79c-2.68-9.84-6.56-17.3-11.03-22.37-9.24-9.84-23.56-14.91-42.94-14.91-44.43,0-66.5,28.33-66.5,85.29s19.98,92.75,61.73,92.75c8.65,0,14.61-1.19,17.6-3.88,2.09-1.49,2.98-6.26,2.98-13.72v-22.07c0-14.91-1.19-24.16-3.58-27.73-2.68-3.58-7.75-6.56-15.81-8.95v-1.79h78.73v1.79c-6.26,1.79-10.14,4.47-12.23,8.05-2.09,3.88-3.28,13.42-3.28,28.33v21.17c0,11.63.6,20.28,2.09,26.24-2.39.3-6.56.6-12.52,1.49Z" />
+                                    <path
+                                        class="cls-2"
+                                        d="m255.89,204.29h-56.96v-1.79c3.88-.9,6.86-2.09,9.25-4.18,4.77-3.28,9.24-10.74,13.72-22.37l45.63-123.46c3.88-10.44,9.54-26.24,16.7-47.12h31.31l15.81,44.73,45.33,124.06c4.17,11.03,8.35,18.49,12.23,22.37,2.39,2.68,6.26,4.47,11.93,5.96v1.79h-85.29v-1.79c6.26-1.19,11.03-2.98,13.72-5.07,2.68-2.09,3.88-4.77,3.88-8.05s-1.49-9.24-4.77-17.89l-12.23-34.3h-62.33l-11.93,36.08c-2.39,7.46-3.58,13.42-3.58,17.3,0,2.68,1.19,4.77,3.88,6.86s7.46,3.88,13.72,5.07v1.79Zm56.06-82.31l-26.54-79.33c-2.09,7.16-11.03,33.7-26.54,79.33h53.08Z" />
+                                    <path
+                                        class="cls-2"
+                                        d="m413.95,204.29v-1.79c5.67-1.79,10.74-4.47,15.81-8.05,2.98-2.09,4.47-9.24,4.47-20.88V43.25c0-14.61-1.19-23.86-3.58-27.44-2.09-3.28-7.75-6.26-16.7-8.65v-1.79h86.48v1.79c-9.54,2.68-15.51,5.07-17.89,7.75-3.88,4.47-4.47,9.24-4.47,28.03v131.51c0,11.03,2.39,14.91,14.31,14.91h30.12c12.53,0,21.17-2.09,25.65-5.96,4.17-3.58,9.25-12.23,14.91-25.65h1.79c0,1.19,0,4.47-.3,10.14-.3,11.03-.89,21.77-1.19,26.54-.89,8.65-2.39,9.84-9.24,9.84h-140.16Z" />
+                                    <path
+                                        class="cls-2"
+                                        d="m576.78,204.29v-1.79c5.67-1.79,10.74-4.47,15.81-8.05,2.98-2.09,4.47-9.24,4.47-20.88V43.25c0-14.61-1.19-23.86-3.58-27.44-2.09-3.28-7.75-6.26-16.7-8.65v-1.79h86.48v1.79c-9.54,2.68-15.51,5.07-17.89,7.75-3.88,4.47-4.47,9.24-4.47,28.03v131.51c0,11.03,2.38,14.91,14.31,14.91h30.12c12.53,0,21.17-2.09,25.65-5.96,4.17-3.58,9.24-12.23,14.91-25.65h1.79c0,1.19,0,4.47-.3,10.14-.3,11.03-.89,21.77-1.19,26.54-.89,8.65-2.39,9.84-9.25,9.84h-140.16Z" />
+                                    <path
+                                        class="cls-2"
+                                        d="m739.61,204.29v-1.79c7.46-2.09,12.82-4.47,16.1-7.75,2.68-2.68,4.17-9.84,4.17-21.17V39.97c0-13.72-1.19-22.07-3.88-24.75-3.28-3.88-8.95-6.56-16.4-8.05v-1.79h134.5c5.96,0,7.46,1.79,7.46,7.75,0,6.26-.89,17-2.39,32.51h-1.79c-4.77-13.72-10.74-21.47-17.89-23.26-4.77-1.49-11.03-2.09-18.79-2.09h-28.33c-6.86,0-8.65,2.09-8.65,8.95v63.82h21.47c10.14,0,18.19-.89,24.16-2.39,9.84-2.39,11.93-5.96,16.4-19.38h1.79v57.26h-1.79c-3.28-12.82-6.86-17.3-18.49-19.38-5.07-.9-12.23-1.19-21.77-1.19h-21.77v66.2c0,11.03,2.38,15.21,14.31,15.21h31.31c11.63,0,19.98-2.09,24.75-5.96,4.47-3.88,9.25-12.23,14.61-25.65h1.79c0,3.88-.6,31.01-1.49,38.77-.89,6.86-2.68,7.75-10.14,7.75h-139.27Z" />
+                                    <path
+                                        class="cls-2"
+                                        d="m995.78,204.29h-85.89v-1.79c8.35-2.09,14.02-5.37,17-9.25,2.09-3.58,3.28-12.82,3.28-27.73V43.25c0-14.91-1.19-24.16-3.28-27.44-2.09-3.28-7.75-5.96-17-8.65v-1.79h73.66c18.79,0,33.7.89,44.73,2.68,29.52,5.07,44.73,20.88,44.73,50.7,0,25.94-17.3,42.94-40.86,50.4,4.77,2.68,9.24,6.86,15.51,16.4,3.28,4.47,5.96,8.95,8.35,12.82l11.03,18.19,12.82,20.58c9.54,15.51,16.7,22.07,26.54,24.45v1.49c-14.02,1.49-25.35,2.39-34,2.39-14.02,0-23.56-1.79-28.63-5.67-6.26-4.77-12.82-14.31-19.68-28.63l-22.37-44.73c-3.28-5.67-8.65-8.65-16.7-8.65h-11.03v48.91c0,14.61,1.19,23.56,3.88,26.84,2.98,3.28,8.95,6.26,17.89,8.95v1.79Zm-21.77-101.1h9.84c12.23,0,21.47-2.39,27.73-6.86,8.95-6.86,13.42-18.49,13.42-34.59,0-20.58-5.37-33.1-16.4-38.17-6.56-2.68-13.72-4.18-21.17-4.18h-4.77c-7.16,0-8.65,2.39-8.65,10.74v73.06Z" />
+                                    <path
+                                        class="cls-2"
+                                        d="m1240.93,204.29h-84.99v-1.79c8.65-2.09,14.31-5.37,17-9.25,2.09-3.58,3.28-12.52,3.28-26.54v-50.7l-53.08-87.97c-4.77-8.05-9.25-13.42-13.12-16.7-2.98-2.39-5.96-3.88-8.65-4.18v-1.79h85.29v1.79c-5.37,1.19-9.25,2.39-11.63,3.88-2.39,1.79-3.58,3.58-3.58,5.67,0,2.98,1.49,7.16,4.77,12.82,17.89,30.42,30.42,51.89,37.58,64.71l5.67-10.14c5.07-8.65,17-28.93,29.82-51.29,3.58-5.96,5.37-11.03,5.37-14.91,0-2.39-1.19-4.47-3.88-6.26-3.58-2.09-6.86-3.58-10.14-4.47v-1.79h53.68v1.79c-3.28.89-6.86,2.98-10.14,5.67-3.28,3.28-7.46,8.35-12.23,15.81l-51.59,82.31v55.77c0,15.21,1.19,24.16,3.88,26.84,2.68,3.28,8.35,6.26,16.7,8.95v1.79Z" />
+                                </g>
+                            </g>
+                        </svg>
+                    </h1>
+                </div>
+            </main>
+
+            <section class="projects-section">
+                <div class="wrapper">
+                    <div class="projects-title">
+                        <h2>Our projects</h2>
+                    </div>
+                    <div class="projects-grid">
+                        <div class="projects-grid-item">
+                            <p class="absolute">Projects</p>
+                            <img
+                                src="../public/images/projects-one.png"
+                                alt="Concrete Solutions Project" />
+                            <h3>Courtil De Pierre</h3>
+                        </div>
+                        <div class="projects-grid-item">
+                            <p class="absolute">Projects</p>
+                            <img
+                                src="../public/images/projects-two.png"
+                                alt="Concrete Solutions Project" />
+                            <h3>Courtil De Pierre</h3>
+                        </div>
+                        <div class="projects-grid-item">
+                            <p class="absolute">Projects</p>
+                            <img
+                                src="../public/images/projects-three.png"
+                                alt="Concrete Solutions Project" />
+                            <h3>Roseville</h3>
+                        </div>
+                        <div class="projects-grid-item">
+                            <p class="absolute">Projects</p>
+                            <img
+                                src="../public/images/projects-four.png"
+                                alt="Concrete Solutions Project" />
+                            <h3>Roseville</h3>
+                        </div>
+                        <div class="projects-grid-item">
+                            <p class="absolute">Projects</p>
+                            <img
+                                src="../public/images/projects-five.png"
+                                alt="Concrete Solutions Project" />
+                            <h3>Castle Construction St Martins</h3>
+                        </div>
+                        <div class="projects-grid-item">
+                            <p class="absolute">Projects</p>
+                            <img
+                                src="../public/images/projects-six.png"
+                                alt="Concrete Solutions Project" />
+                            <h3>Castle Construction St Martins</h3>
+                        </div>
+                        <div class="projects-grid-item">
+                            <p class="absolute">Projects</p>
+                            <img
+                                src="../public/images/projects-seven.png"
+                                alt="Concrete Solutions Project" />
+                            <h3>Forest</h3>
+                        </div>
+                        <div class="projects-grid-item">
+                            <p class="absolute">Projects</p>
+                            <img
+                                src="../public/images/projects-eight.png"
+                                alt="Concrete Solutions Project" />
+                            <h3>Forest</h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="cta-section">
+                <div class="wrapper">
+                    <div class="blur">
+                        <h2>Contact us now</h2>
+                        <p>
+                            Discover the Difference Today. Experience the
+                            excellence of Concrete Solutions Guernsey. Reach out
+                            to us through the form to discuss your upcoming
+                            project.
+                        </p>
+                        <a href="../#contact">
+                            <button class="contact-button">
+                                Contact Us
+                                <span>
+                                    <svg
+                                        viewBox="0 0 28 28"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g id="Group 18">
+                                            <circle
+                                                class="circle"
+                                                id="Ellipse 15"
+                                                cx="14.0396"
+                                                cy="13.9736"
+                                                r="13.9487"
+                                                transform="rotate(90 14.0396 13.9736)"
+                                                fill="white" />
+                                            <path
+                                                id="Arrow 2"
+                                                d="M7.93115 13.2236C7.51694 13.2236 7.18115 13.5594 7.18115 13.9736C7.18115 14.3878 7.51694 14.7236 7.93115 14.7236L7.93115 13.2236ZM20.6786 14.504C20.9715 14.2111 20.9715 13.7362 20.6786 13.4433L15.9057 8.67033C15.6128 8.37744 15.1379 8.37744 14.845 8.67033C14.5521 8.96323 14.5521 9.4381 14.845 9.73099L19.0877 13.9736L14.845 18.2163C14.5521 18.5092 14.5521 18.984 14.845 19.2769C15.1379 19.5698 15.6128 19.5698 15.9057 19.2769L20.6786 14.504ZM7.93115 14.7236L20.1483 14.7236L20.1483 13.2236L7.93115 13.2236L7.93115 14.7236Z"
+                                                fill="black" />
+                                        </g>
+                                    </svg>
+                                </span>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <footer>
+                <div class="wrapper">
+                    <div class="footer-top">
+                        <div class="footer-logo-container">
+                            <a href=""
+                                ><img
+                                    src="../public/concrete-logo-svg copy.svg"
+                                    alt="Concrete Solutions Logo"
+                            /></a>
+                        </div>
+                        <nav>
+                            <ul>
+                                <a href="../">
+                                    <li>Home</li>
+                                </a>
+                                <a href="">
+                                    <li>Gallery</li>
+                                </a>
+                                <a href="../about-concrete-solutions/">
+                                    <li>About</li>
+                                </a>
+
+                                <a href="../#contact">
+                                    <li>Contact</li>
+                                </a>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="footer-bottom">
+                        <a
+                            target="_blank"
+                            rel="external dofollow author"
+                            href="https://islandwebdesign.net/">
+                            Designed by...
+                            <img
+                                src="../black-island-logo.svg"
+                                alt="Island Web Design Guernsey and Jersey Logo" />
+                        </a>
+                        <p>All Rights Reserved 2023</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+        <script src="../ScrollSmoother.min.js"></script>
+    </body>
 </html>
