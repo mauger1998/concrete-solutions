@@ -230,10 +230,10 @@ header .header-wrapper .logo-container img {
   padding: 4rem;
   -webkit-clip-path: polygon(0 100%, 75% 100%, 75% 100%, 0% 100%);
           clip-path: polygon(0 100%, 75% 100%, 75% 100%, 0% 100%);
-  opacity: 0;
   transition: -webkit-clip-path 100ms ease;
   transition: clip-path 100ms ease;
   transition: clip-path 100ms ease, -webkit-clip-path 100ms ease;
+  opacity: 0;
   pointer-events: none;
 }
 .menu .overlay ul {
