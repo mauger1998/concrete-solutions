@@ -115,6 +115,7 @@ fetch(URL)
                 projectNameTwo.textContent = result.projectName
                 projectGridItemTwo.appendChild(projectNameTwo)
             })
+            ScrollTrigger.refresh()
 
             //Team grid items
             gsap.to('.projects-grid-item', {
@@ -183,6 +184,7 @@ fetch(URLTWO)
             gallery.appendChild(swiperScroll)
 
             // Swiper
+            ScrollTrigger.refresh()
 
             const swiper = new Swiper('.swiper', {
                 // Optional parameters
