@@ -234,6 +234,7 @@ header .header-wrapper .logo-container img {
   transition: -webkit-clip-path 100ms ease;
   transition: clip-path 100ms ease;
   transition: clip-path 100ms ease, -webkit-clip-path 100ms ease;
+  pointer-events: none;
 }
 .menu .overlay ul {
   display: block;

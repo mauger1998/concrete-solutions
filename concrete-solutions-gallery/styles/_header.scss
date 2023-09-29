@@ -79,6 +79,7 @@ header {
         clip-path: polygon(0 100%, 75% 100%, 75% 100%, 0% 100%);
         opacity: 1;
         transition: clip-path 100ms ease;
+        pointer-events: none;
 
         ul {
             display: block;
