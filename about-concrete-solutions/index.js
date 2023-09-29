@@ -1,4 +1,4 @@
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText)
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
 
 // create the scrollSmoother before your scrollTriggers
 const smoother = ScrollSmoother.create({
@@ -48,25 +48,6 @@ gsap.to('.icon-card', {
     clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)',
     stagger: 0.2,
     ease: Power1.easeOut,
-})
-
-// Split Text
-
-let splitText = document.querySelector('.split')
-
-let split = new SplitText(splitText, {
-    type: 'chars lines',
-})
-
-gsap.to('.split > div > div', {
-    scrollTrigger: {
-        trigger: '.split > div > div',
-        start: 'top 90%',
-        toggleActions: 'play none none reverse',
-        markers: true,
-    },
-    y: 0,
-    stagger: 0.005,
 })
 
 let URL =

@@ -438,15 +438,27 @@ main .wrapper .hero-text p {
   align-items: center;
 }
 .about-section .wrapper .content h2 {
-  overflow: hidden;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 1.1;
+  margin-block-end: 2rem;
+}
+.about-section .wrapper .content h3 {
   line-height: 1.5;
-  max-width: 60ch;
+  font-weight: 500 !important;
+  max-width: 40ch;
+  font-size: 32px;
   font-family: "Darker Grotesque", sans-serif;
 }
-.about-section .wrapper .content h2 > div {
+@media (max-width: 700px) {
+  .about-section .wrapper .content h3 {
+    font-size: 24px;
+  }
+}
+.about-section .wrapper .content h3 > div {
   overflow: hidden;
 }
-.about-section .wrapper .content h2 > div > div {
+.about-section .wrapper .content h3 > div > div {
   transform: translateY(8rem);
 }
 .about-section .wrapper button {
