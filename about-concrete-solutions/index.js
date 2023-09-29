@@ -55,20 +55,7 @@ gsap.to('.icon-card', {
 let splitText = document.querySelector('.split')
 
 let split = new SplitText(splitText, {
-    type: 'chars, lines',
-})
-
-split.lines.forEach((target) => {
-    gsap.to(target, {
-        backgroundPositionX: 0,
-        ease: 'none',
-        scrollTrigger: {
-            trigger: target,
-            scrub: 1,
-            start: 'top center',
-            end: 'bottom center',
-        },
-    })
+    type: 'chars lines',
 })
 
 gsap.to('.split > div > div', {
@@ -76,20 +63,10 @@ gsap.to('.split > div > div', {
         trigger: '.split > div > div',
         start: 'top 90%',
         toggleActions: 'play none none reverse',
+        markers: true,
     },
     y: 0,
     stagger: 0.005,
-})
-gsap.to('.content h2', {
-    scrollTrigger: {
-        trigger: '.content h2',
-        start: 'top 90%',
-        toggleActions: 'play none none reset',
-    },
-    clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)',
-    delay: 0.25,
-    stagger: 0.2,
-    ease: Power1.easeOut,
 })
 
 let URL =
