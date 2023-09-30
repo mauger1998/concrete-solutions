@@ -127,7 +127,9 @@ button {
   padding: 0.75rem 2rem;
   position: relative;
   line-height: 1;
-  transition: background-color 500ms ease, color 500ms ease !important;
+  transition: background-color 500ms ease, color 500ms ease, -webkit-clip-path 500ms ease !important;
+  transition: background-color 500ms ease, color 500ms ease, clip-path 500ms ease !important;
+  transition: background-color 500ms ease, color 500ms ease, clip-path 500ms ease, -webkit-clip-path 500ms ease !important;
   cursor: pointer;
 }
 button span {
@@ -141,10 +143,18 @@ button span svg {
   border-radius: 100%;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
 }
+button span svg circle {
+  transition: fill 500ms ease;
+}
+button span svg path {
+  transition: fill 500ms ease;
+}
 button:hover {
   background-color: transparent;
   color: #ffffff;
-  transition: background-color 500ms ease, color 500ms ease !important;
+  transition: background-color 500ms ease, color 500ms ease, -webkit-clip-path 500ms ease !important;
+  transition: background-color 500ms ease, color 500ms ease, clip-path 500ms ease !important;
+  transition: background-color 500ms ease, color 500ms ease, clip-path 500ms ease, -webkit-clip-path 500ms ease !important;
 }
 button:hover span svg circle {
   fill: black;

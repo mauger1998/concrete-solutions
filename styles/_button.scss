@@ -1,50 +1,53 @@
-@use "./variables" as *;
-
-
+@use './variables' as *;
 
 button {
-    background-color:$black;
-    color:$white;
-    font-weight:700;
-    font-size:$text;
-    border:2px solid $black;
-    display:flex;
+    background-color: $black;
+    color: $white;
+    font-weight: 700;
+    font-size: $text;
+    border: 2px solid $black;
+    display: flex;
     align-items: center;
-    padding:0.75rem 2rem;
-    position:relative;
-    line-height:1;
-    transition:background-color 500ms ease, color 500ms ease !important;
-    cursor:pointer;
+    padding: 0.75rem 2rem;
+    position: relative;
+    line-height: 1;
+    transition: background-color 500ms ease, color 500ms ease,
+        clip-path 500ms ease !important ;
+    cursor: pointer;
 
     span {
-        display:flex;
+        display: flex;
         align-items: center;
-        position:absolute;
-        right:-10%;
+        position: absolute;
+        right: -10%;
 
         svg {
-            width:2rem;
-            border-radius:100%;
+            width: 2rem;
+            border-radius: 100%;
             box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
-
-           
-
+            circle {
+                transition: fill 500ms ease;
+            }
+            path {
+                transition: fill 500ms ease;
+            }
         }
     }
 
     &:hover {
-        background-color:transparent;
-        color:$white;
-        transition:background-color 500ms ease, color 500ms ease !important;
+        background-color: transparent;
+        color: $white;
+        transition: background-color 500ms ease, color 500ms ease,
+            clip-path 500ms ease !important;
         span {
             svg {
                 circle {
-                    fill:black;
-                    transition:fill 500ms ease;
+                    fill: black;
+                    transition: fill 500ms ease;
                 }
                 path {
-                    fill:white;
-                    transition:fill 500ms ease;
+                    fill: white;
+                    transition: fill 500ms ease;
                 }
             }
         }
